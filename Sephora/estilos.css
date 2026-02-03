@@ -1,0 +1,15 @@
+.nav-link {
+  padding: 0.25rem 0;
+}
+
+.text-pink {
+  color: #e6007e !important;
+}
+
+.input-group {
+  height: 44px;
+}
+
+input:focus {
+  box-shadow: none !important;
+}

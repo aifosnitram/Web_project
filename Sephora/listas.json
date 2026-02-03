@@ -1,0 +1,74 @@
+{
+  "champus": [
+    {
+      "id": 1,
+      "marca": "Head & Shoulders",
+      "tipo": "Anticaspa",
+      "precio": 5.5,
+      "tamaño": 400
+    },
+    {
+      "id": 2,
+      "marca": "Pantene",
+      "tipo": "Nutrición",
+      "precio": 4.8,
+      "tamaño": 350
+    },
+    {
+      "id": 3,
+      "marca": "Garnier Fructis",
+      "tipo": "Fuerza y crecimiento",
+      "precio": 4.2,
+      "tamaño": 300
+    },
+    {
+      "id": 4,
+      "marca": "L'Oréal Elvive",
+      "tipo": "Reparación",
+      "precio": 5.0,
+      "tamaño": 400
+    },
+    {
+      "id": 5,
+      "marca": "Dove",
+      "tipo": "Hidratación",
+      "precio": 4.7,
+      "tamaño": 350
+    },
+    {
+      "id": 6,
+      "marca": "Herbal Essences",
+      "tipo": "Suavidad",
+      "precio": 4.5,
+      "tamaño": 400
+    },
+    {
+      "id": 7,
+      "marca": "Tresemmé",
+      "tipo": "Brillo intenso",
+      "precio": 6.0,
+      "tamaño": 500
+    },
+    {
+      "id": 8,
+      "marca": "Seda",
+      "tipo": "Cabello dañado",
+      "precio": 3.9,
+      "tamaño": 350
+    },
+    {
+      "id": 9,
+      "marca": "Aussie",
+      "tipo": "Cabello seco",
+      "precio": 5.2,
+      "tamaño": 400
+    },
+    {
+      "id": 10,
+      "marca": "Nivea",
+      "tipo": "Cuidado diario",
+      "precio": 4.3,
+      "tamaño": 300
+    }
+  ]
+}
