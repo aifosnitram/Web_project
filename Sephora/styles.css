@@ -1,8 +1,12 @@
 /* variables */
 :root {
-  --sephora-red: #ff0000;
+  --sephora-red: #900;
   --black: #000000;
-  --white: #ffffff;
+  --background: #ffffff;
+  --shadow-strong-color: rgba(0,0,0,.4);
+  --shadow-light-color: rgba(0,0,0,.1);
+  --shadow-sticky-color: rgba(0,0,0,.1);
+  --shadow-medium-color: rgba(0,0,0,.15);
 }
 
 .text, body {
