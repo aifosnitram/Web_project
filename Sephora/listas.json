@@ -70,5 +70,293 @@
       "precio": 4.3,
       "tamaño": 300
     }
+  ],
+  "perfume": [
+    {
+      "id": 1,
+      "marca": "Dior",
+      "tipo": "Sauvage (Hombre)",
+      "precio": 95.0,
+      "tamaño": 100
+    },
+    {
+      "id": 2,
+      "marca": "Chanel",
+      "tipo": "Nº 5 (Mujer)",
+      "precio": 125.0,
+      "tamaño": 50
+    },
+    {
+      "id": 3,
+      "marca": "Giorgio Armani",
+      "tipo": "Acqua di Gio (Hombre)",
+      "precio": 85.5,
+      "tamaño": 75
+    },
+    {
+      "id": 4,
+      "marca": "Carolina Herrera",
+      "tipo": "Good Girl (Mujer)",
+      "precio": 110.0,
+      "tamaño": 80
+    },
+    {
+      "id": 5,
+      "marca": "Paco Rabanne",
+      "tipo": "1 Million (Hombre)",
+      "precio": 78.0,
+      "tamaño": 100
+    },
+    {
+      "id": 6,
+      "marca": "Yves Saint Laurent",
+      "tipo": "Libre (Mujer)",
+      "precio": 105.0,
+      "tamaño": 90
+    },
+    {
+      "id": 7,
+      "marca": "Hugo Boss",
+      "tipo": "Boss Bottled (Hombre)",
+      "precio": 72.0,
+      "tamaño": 100
+    },
+    {
+      "id": 8,
+      "marca": "Lancôme",
+      "tipo": "La Vie Est Belle (Mujer)",
+      "precio": 98.0,
+      "tamaño": 75
+    },
+    {
+      "id": 9,
+      "marca": "Versace",
+      "tipo": "Eros (Hombre)",
+      "precio": 82.0,
+      "tamaño": 100
+    },
+    {
+      "id": 10,
+      "marca": "Marc Jacobs",
+      "tipo": "Daisy (Mujer)",
+      "precio": 88.0,
+      "tamaño": 50
+    }
+  ],
+  "makeup": [
+    {
+      "id": 1,
+      "marca": "Maybelline",
+      "tipo": "Base Líquida",
+      "precio": 12.5,
+      "tamaño": 30
+    },
+    {
+      "id": 2,
+      "marca": "L'Oréal",
+      "tipo": "Máscara de Pestañas",
+      "precio": 15.0,
+      "tamaño": 10
+    },
+    {
+      "id": 3,
+      "marca": "MAC",
+      "tipo": "Labial Matte",
+      "precio": 22.0,
+      "tamaño": 3
+    },
+    {
+      "id": 4,
+      "marca": "Clinique",
+      "tipo": "Polvo Compacto",
+      "precio": 28.5,
+      "tamaño": 12
+    },
+    {
+      "id": 5,
+      "marca": "NARS",
+      "tipo": "Corrector",
+      "precio": 30.0,
+      "tamaño": 6
+    },
+    {
+      "id": 6,
+      "marca": "Revlon",
+      "tipo": "Delineador",
+      "precio": 9.9,
+      "tamaño": 1
+    },
+    {
+      "id": 7,
+      "marca": "Urban Decay",
+      "tipo": "Fijador",
+      "precio": 33.0,
+      "tamaño": 118
+    },
+    {
+      "id": 8,
+      "marca": "Estée Lauder",
+      "tipo": "Prebase",
+      "precio": 38.0,
+      "tamaño": 30
+    },
+    {
+      "id": 9,
+      "marca": "Fenty Beauty",
+      "tipo": "Iluminador",
+      "precio": 34.0,
+      "tamaño": 8
+    },
+    {
+      "id": 10,
+      "marca": "Nyx",
+      "tipo": "Sombras de Ojos",
+      "precio": 18.5,
+      "tamaño": 15
+    }
+  ],
+  "skincare": [
+    {
+      "id": 1,
+      "marca": "CeraVe",
+      "tipo": "Limpiador Hidratante",
+      "precio": 14.5,
+      "tamaño": 473
+    },
+    {
+      "id": 2,
+      "marca": "The Ordinary",
+      "tipo": "Sérum Niacinamida",
+      "precio": 7.8,
+      "tamaño": 30
+    },
+    {
+      "id": 3,
+      "marca": "La Roche-Posay",
+      "tipo": "Protector Solar SPF50",
+      "precio": 19.5,
+      "tamaño": 50
+    },
+    {
+      "id": 4,
+      "marca": "Neutrogena",
+      "tipo": "Gel Hydro Boost",
+      "precio": 16.0,
+      "tamaño": 50
+    },
+    {
+      "id": 5,
+      "marca": "Kiehl's",
+      "tipo": "Contorno de Ojos",
+      "precio": 32.0,
+      "tamaño": 14
+    },
+    {
+      "id": 6,
+      "marca": "Bioderma",
+      "tipo": "Agua Micelar",
+      "precio": 15.5,
+      "tamaño": 500
+    },
+    {
+      "id": 7,
+      "marca": "Vichy",
+      "tipo": "Sérum Mineral 89",
+      "precio": 24.0,
+      "tamaño": 50
+    },
+    {
+      "id": 8,
+      "marca": "Eucerin",
+      "tipo": "Crema Antimanchas",
+      "precio": 28.5,
+      "tamaño": 50
+    },
+    {
+      "id": 9,
+      "marca": "Glossier",
+      "tipo": "Bálsamo Labial",
+      "precio": 12.0,
+      "tamaño": 15
+    },
+    {
+      "id": 10,
+      "marca": "Paula's Choice",
+      "tipo": "Exfoliante BHA",
+      "precio": 34.0,
+      "tamaño": 118
+    }
+  ],
+  "cepillos": [
+    {
+      "id": 1,
+      "marca": "Wet Brush",
+      "tipo": "Desenredante",
+      "precio": 10.5,
+      "tamaño": 25
+    },
+    {
+      "id": 2,
+      "marca": "Tangle Teezer",
+      "tipo": "Compacto",
+      "precio": 14.0,
+      "tamaño": 10
+    },
+    {
+      "id": 3,
+      "marca": "Denman",
+      "tipo": "Definidor de Rizos",
+      "precio": 18.0,
+      "tamaño": 22
+    },
+    {
+      "id": 4,
+      "marca": "GHD",
+      "tipo": "Cilíndrico Térmico",
+      "precio": 25.5,
+      "tamaño": 45
+    },
+    {
+      "id": 5,
+      "marca": "Olivia Garden",
+      "tipo": "Paleta (Paddle)",
+      "precio": 20.0,
+      "tamaño": 26
+    },
+    {
+      "id": 6,
+      "marca": "Mason Pearson",
+      "tipo": "Cerdas de Jabalí",
+      "precio": 120.0,
+      "tamaño": 23
+    },
+    {
+      "id": 7,
+      "marca": "Termix",
+      "tipo": "Esquelético (Vent)",
+      "precio": 8.5,
+      "tamaño": 21
+    },
+    {
+      "id": 8,
+      "marca": "Moroccanoil",
+      "tipo": "Redondo Cerámico",
+      "precio": 22.0,
+      "tamaño": 35
+    },
+    {
+      "id": 9,
+      "marca": "Beter",
+      "tipo": "Neumático Madera",
+      "precio": 12.0,
+      "tamaño": 24
+    },
+    {
+      "id": 10,
+      "marca": "Conair",
+      "tipo": "Masajeador Cuero Cabelludo",
+      "precio": 6.5,
+      "tamaño": 8
+    }
   ]
 }
