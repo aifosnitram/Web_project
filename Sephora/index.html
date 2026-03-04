@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEfORA</title>
+    <link rel="stylesheet" href="./css/estilos.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link 
+      rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <script defer src="./js/app.js"></script>
+  </head>
+  <body>
+    <header class="border-bottom">
+      <!-- 🔹 TOP BAR -->
+      <div class="container-fluid py-3 d-flex align-items-center gap-4">
+        <!-- Logo -->
+        <div class="fw-bold fs-3">SEfORA</div>
+
+        <!-- Buscador -->
+        <div class="flex-grow-1">
+          <div class="input-group rounded-pill bg-light px-3">
+            <span class="input-group-text bg-transparent border-0">
+              <i class="bi bi-search"></i>
+            </span>
+            <input
+              id="main-searcbar"
+              type="text"
+              class="form-control border-0 bg-light"
+              placeholder="Buscar un producto, una marca..."
+            />
+            <span
+              class="input-group-text bg-transparent border-0 text-decoration-underline small"
+            >
+              Eliminar
+            </span>
+          </div>
+        </div>
+
+        <!-- Links derecha -->
+        <div class="d-flex align-items-center gap-4 small fw-semibold">
+          <span><i class="bi bi-geo-alt"></i> Tiendas & Servicios</span>
+          <span><i class="bi bi-person"></i> Iniciar sesión</span>
+          <i class="bi bi-heart fs-5"></i>
+          <i class="bi bi-bag fs-5"></i>
+        </div>
+      </div>
+
+      <nav class="container-fluid border-top">
+        <ul class="nav py-2 gap-3">
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-semibold" href="#">San Valentín</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-semibold" href="#"
+              >Solo En Sephora</a
+            >
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-semibold" href="#">Marcas</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-semibold" href="#">Nuevo</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link fw-semibold text-danger" href="#"
+              >Beauty Ofertas</a
+            >
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-semibold" href="#">Maquillaje</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-semibold" href="#">Tratamiento</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-semibold" href="#">Perfume</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-semibold" href="#">Cabello</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-semibold" href="#">Cuerpo</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link fw-semibold text-pink" href="#"
+              >Sephora Collection</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section id="banner"></section>
+    <section class="footer-newsletter">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h4 class="fw-bold">¡Recibe nuestras noticias y ofertas!</h4>
+                    <p class="fw-bold mb-2 small">¡Suscríbete a nuestra newsletter y disfruta de un 10% de descuento(1) en tu siguiente pedido!</p>
+                    <p class="legal-text mb-1">
+                        Al registrarme, acepto recibir por correo electrónico mi código de descuento, así como ofertas y noticias de Sephora y declaro que tengo al menos 16 años. Consiento el tratamiento de mis <a href="#" class="text-dark">datos personales</a> y acepto la <a href="#" class="text-dark">política de privacidad</a>.
+                    </p>
+                    <p class="legal-text"><a href="#" class="text-dark">(1) Ver condiciones de la oferta</a></p>
+                </div>
+                <div class="col-lg-6">
+                    <form>
+                        <label class="form-label small fw-bold">Dirección de correo electrónico</label>
+                        <div class="input-group mb-2">
+                            <input type="email" class="form-control" placeholder="Por ejemplo: nombre@ejemplo.com">
+                            <button class="btn btn-dark px-4" type="button">Suscribirse</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer-features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 mb-3 mb-md-0 d-flex align-items-center">
+                    <i class="fa-solid fa-truck feature-icon"></i>
+                    <div>
+                        <p class="feature-title">Envío gratis</p>
+                        <p class="feature-text">Por compras superiores a 30€</p>
+                        <a href="#" class="feature-link">Saber más</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3 mb-md-0 d-flex align-items-center">
+                    <i class="fa-solid fa-arrow-rotate-left feature-icon"></i>
+                    <div>
+                        <p class="feature-title">Devoluciones</p>
+                        <p class="feature-text">Gratis con 30 días para cambios y devoluciones</p>
+                        <a href="#" class="feature-link">Saber más</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3 mb-md-0 d-flex align-items-center">
+                    <i class="fa-solid fa-bag-shopping feature-icon"></i>
+                    <div>
+                        <p class="feature-title">Click & Collect</p>
+                        <p class="feature-text">Recoge en 2h gratis*</p>
+                        <a href="#" class="feature-link">Saber más</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 d-flex align-items-center">
+                    <i class="fa-regular fa-credit-card feature-icon"></i>
+                    <div>
+                        <p class="feature-title">Métodos de pago</p>
+                        <p class="feature-text">Pago seguro y en varias transacciones</p>
+                        <a href="#" class="feature-link">Saber más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-main position-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="footer-heading">Ayuda</div>
+                    <ul class="list-unstyled">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Formas de pago</a></li>
+                        <li><a href="#">Métodos de entrega</a></li>
+                        <li><a href="#">Devoluciones y reembolsos</a></li>
+                        <li><a href="#">Tarjeta regalo digital</a></li>
+                        <li><a href="#">Tarjeta regalo física</a></li>
+                        <li><a href="#">Tarjeta regalo para empresas</a></li>
+                        <li><a href="#">Mapa del sitio</a></li>
+                        <li><a href="#">Formulario de contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="footer-heading">Mi cuenta</div>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Seguimiento del pedido</a></li>
+                        <li><a href="#">Programa de fidelidad</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="footer-heading">Acerca de Sephora</div>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Blog de Sephora</a></li>
+                        <li><a href="#">Trabaja con nosotros</a></li>
+                        <li><a href="#">Tiendas</a></li>
+                        <li><a href="#">Sephora Stands</a></li>
+                        <li><a href="#">Internacional</a></li>
+                        <li><a href="#">Descubrir Sephora</a></li>
+                        <li><a href="#">Código promocional Sephora</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="footer-heading">Novedades</div>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Rebajas</a></li>
+                        <li><a href="#">Maquillaje</a></li>
+                        <li><a href="#">San Valentín</a></li>
+                        <li><a href="#">Día del Padre</a></li>
+                        <li><a href="#">Perfumes hombre</a></li>
+                        <li><a href="#">Día de la Madre</a></li>
+                        <li><a href="#">Calendario Adviento</a></li>
+                        <li><a href="#">Singles' Day</a></li>
+                        <li><a href="#">Black Friday</a></li>
+                        <li><a href="#">Cyber Monday</a></li>
+                        <li><a href="#">Blue Monday</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-8 mb-4">
+                    <div class="footer-heading">Síguenos</div>
+                    <div class="social-icons mb-4">
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    
+                    <div class="footer-heading mt-4">Descarga la aplicación Sephora</div>
+                    <div class="app-badges mt-2">
+                        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play"></a>
+                        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store"></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-12" style="font-size: 0.7rem; color: #666;">
+                    <p class="mb-0">Marcas excluidas de nuestras promociones <a href="#" style="color:#666; text-decoration:underline;">aquí</a>.</p>
+                    <p class="mb-0">*Ver condiciones de nuestras ofertas en Ofertas de Belleza</p>
+                    <p class="mb-0">**Exclusividad en la red nacional de perfumería.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="footer-bottom position-relative">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-9 mb-3 mb-lg-0">
+                    <a href="#">Política de privacidad y cookies</a>
+                    <a href="#">Preferencia de cookies</a>
+                    <a href="#">Aviso legal y Condiciones Generales de Uso</a>
+                    <a href="#">Condiciones Generales de Venta</a>
+                    <a href="#">Condiciones Programa de fidelidad</a>
+                    <a href="#" style="border:none;">Condiciones de publicación</a>
+                </div>
+                <div class="col-lg-3 text-lg-end d-flex justify-content-lg-end align-items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" alt="España" width="20" class="me-2">
+                    <span class="text-white">España</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-top">
+            <i class="fa-solid fa-chevron-up"></i>
+        </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+/* variables */
+:root {
+  --sephora-red: #900;
+  --black: #000000;
+  --background: #ffffff;
+  --shadow-strong-color: rgba(0,0,0,.4);
+  --shadow-light-color: rgba(0,0,0,.1);
+  --shadow-sticky-color: rgba(0,0,0,.1);
+  --shadow-medium-color: rgba(0,0,0,.15);
+}
+
+.text, body {
+	font-family: AvantGardeMedium,Arial,sans-serif;
+	letter-spacing: .5px;
+	font-size: .9375rem;
+	line-height: 1.27;
+}
+
+.footer-newsletter {
+            background-color: #f8f9fa; /* Light gray */
+            padding: 40px 0;
+        }
+        .footer-features {
+            background-color: #ffffff;
+            padding: 30px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .footer-main {
+            background-color: #000000; /* Pure black */
+            color: #ffffff;
+            padding: 50px 0 20px 0;
+        }
+        .footer-main a {
+            color: #cccccc;
+            text-decoration: none;
+            font-size: 0.85rem;
+            line-height: 2;
+        }
+        .footer-main a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-heading {
+            font-weight: bold;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+        .feature-icon {
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+        .feature-title {
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        .feature-text {
+            font-size: 0.8rem;
+            color: #666;
+            margin: 0;
+        }
+        .feature-link {
+            font-size: 0.8rem;
+            color: #000;
+            text-decoration: underline;
+        }
+        .social-icons a {
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin-right: 15px;
+        }
+        .app-badges img {
+            height: 40px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        .footer-bottom {
+            background-color: #000000;
+            border-top: 1px solid #333;
+            padding: 20px 0;
+            font-size: 0.75rem;
+            color: #999;
+        }
+        .footer-bottom a {
+            color: #999;
+            text-decoration: none;
+            margin-right: 10px;
+            padding-right: 10px;
+            border-right: 1px solid #555;
+        }
+        .footer-bottom a:last-child {
+            border-right: none;
+        }
+        .scroll-top {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            border: 1px solid #fff;
+            background: #000;
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .legal-text {
+            font-size: 0.75rem;
+            color: #555;
+        }
