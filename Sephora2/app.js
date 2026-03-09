@@ -47,7 +47,7 @@ const renderProducts = (products) => {
     products.forEach(i => {
         const template = `    
             <article>
-                <img src="./img/${i.img || ""}" alt="">
+                <img src="./img/${i.categoria}/${i.img || ""}" alt="">
                 <h3>Name: ${i.tipo}</h3>
                 <h4>${i.marca}</h4>
                 <button onclick="addToCart(${i.id})">Añadir al carrito</button>
@@ -119,6 +119,7 @@ const init = async () => {
 
     /*    // render initial products if any
       renderProducts(productList);  */
+      if (searchTag) searchTag.addEventListener("input", searchTop);
 }
 init();
 
