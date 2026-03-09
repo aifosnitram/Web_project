@@ -1,0 +1,74 @@
+{
+    "perfume": [
+        {
+            "id": 1,
+            "marca": "Dior",
+            "tipo": "Sauvage (Hombre)",
+            "precio": 95.0,
+            "tamaño": 100
+        },
+        {
+            "id": 2,
+            "marca": "Chanel",
+            "tipo": "Nº 5 (Mujer)",
+            "precio": 125.0,
+            "tamaño": 50
+        },
+        {
+            "id": 3,
+            "marca": "Giorgio Armani",
+            "tipo": "Acqua di Gio (Hombre)",
+            "precio": 85.5,
+            "tamaño": 75
+        },
+        {
+            "id": 4,
+            "marca": "Carolina Herrera",
+            "tipo": "Good Girl (Mujer)",
+            "precio": 110.0,
+            "tamaño": 80
+        },
+        {
+            "id": 5,
+            "marca": "Paco Rabanne",
+            "tipo": "1 Million (Hombre)",
+            "precio": 78.0,
+            "tamaño": 100
+        },
+        {
+            "id": 6,
+            "marca": "Yves Saint Laurent",
+            "tipo": "Libre (Mujer)",
+            "precio": 105.0,
+            "tamaño": 90
+        },
+        {
+            "id": 7,
+            "marca": "Hugo Boss",
+            "tipo": "Boss Bottled (Hombre)",
+            "precio": 72.0,
+            "tamaño": 100
+        },
+        {
+            "id": 8,
+            "marca": "Lancôme",
+            "tipo": "La Vie Est Belle (Mujer)",
+            "precio": 98.0,
+            "tamaño": 75
+        },
+        {
+            "id": 9,
+            "marca": "Versace",
+            "tipo": "Eros (Hombre)",
+            "precio": 82.0,
+            "tamaño": 100
+        },
+        {
+            "id": 10,
+            "marca": "Marc Jacobs",
+            "tipo": "Daisy (Mujer)",
+            "precio": 88.0,
+            "tamaño": 50
+        }
+    ]
+}

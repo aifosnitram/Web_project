@@ -1,0 +1,74 @@
+{
+    "skincare": [
+        {
+            "id": 1,
+            "marca": "CeraVe",
+            "tipo": "Limpiador Hidratante",
+            "precio": 14.5,
+            "tamaño": 473
+        },
+        {
+            "id": 2,
+            "marca": "The Ordinary",
+            "tipo": "Sérum Niacinamida",
+            "precio": 7.8,
+            "tamaño": 30
+        },
+        {
+            "id": 3,
+            "marca": "La Roche-Posay",
+            "tipo": "Protector Solar SPF50",
+            "precio": 19.5,
+            "tamaño": 50
+        },
+        {
+            "id": 4,
+            "marca": "Neutrogena",
+            "tipo": "Gel Hydro Boost",
+            "precio": 16.0,
+            "tamaño": 50
+        },
+        {
+            "id": 5,
+            "marca": "Kiehl's",
+            "tipo": "Contorno de Ojos",
+            "precio": 32.0,
+            "tamaño": 14
+        },
+        {
+            "id": 6,
+            "marca": "Bioderma",
+            "tipo": "Agua Micelar",
+            "precio": 15.5,
+            "tamaño": 500
+        },
+        {
+            "id": 7,
+            "marca": "Vichy",
+            "tipo": "Sérum Mineral 89",
+            "precio": 24.0,
+            "tamaño": 50
+        },
+        {
+            "id": 8,
+            "marca": "Eucerin",
+            "tipo": "Crema Antimanchas",
+            "precio": 28.5,
+            "tamaño": 50
+        },
+        {
+            "id": 9,
+            "marca": "Glossier",
+            "tipo": "Bálsamo Labial",
+            "precio": 12.0,
+            "tamaño": 15
+        },
+        {
+            "id": 10,
+            "marca": "Paula's Choice",
+            "tipo": "Exfoliante BHA",
+            "precio": 34.0,
+            "tamaño": 118
+        }
+    ]
+}

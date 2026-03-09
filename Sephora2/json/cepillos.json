@@ -1,0 +1,74 @@
+{
+    "cepillos": [
+        {
+            "id": 1,
+            "marca": "Wet Brush",
+            "tipo": "Desenredante",
+            "precio": 10.5,
+            "tamaño": 25
+        },
+        {
+            "id": 2,
+            "marca": "Tangle Teezer",
+            "tipo": "Compacto",
+            "precio": 14.0,
+            "tamaño": 10
+        },
+        {
+            "id": 3,
+            "marca": "Denman",
+            "tipo": "Definidor de Rizos",
+            "precio": 18.0,
+            "tamaño": 22
+        },
+        {
+            "id": 4,
+            "marca": "GHD",
+            "tipo": "Cilíndrico Térmico",
+            "precio": 25.5,
+            "tamaño": 45
+        },
+        {
+            "id": 5,
+            "marca": "Olivia Garden",
+            "tipo": "Paleta (Paddle)",
+            "precio": 20.0,
+            "tamaño": 26
+        },
+        {
+            "id": 6,
+            "marca": "Mason Pearson",
+            "tipo": "Cerdas de Jabalí",
+            "precio": 120.0,
+            "tamaño": 23
+        },
+        {
+            "id": 7,
+            "marca": "Termix",
+            "tipo": "Esquelético (Vent)",
+            "precio": 8.5,
+            "tamaño": 21
+        },
+        {
+            "id": 8,
+            "marca": "Moroccanoil",
+            "tipo": "Redondo Cerámico",
+            "precio": 22.0,
+            "tamaño": 35
+        },
+        {
+            "id": 9,
+            "marca": "Beter",
+            "tipo": "Neumático Madera",
+            "precio": 12.0,
+            "tamaño": 24
+        },
+        {
+            "id": 10,
+            "marca": "Conair",
+            "tipo": "Masajeador Cuero Cabelludo",
+            "precio": 6.5,
+            "tamaño": 8
+        }
+    ]
+}
