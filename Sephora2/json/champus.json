@@ -2,6 +2,7 @@
     "champus": [
         {
             "id": 1,
+            "categoria": "champus",
             "marca": "FENTY HAIR",
             "tipo": "Estuche",
             "precio": 55.0,
@@ -10,6 +11,7 @@
         },
         {
             "id": 2,
+            "categoria": "champus",
             "marca": "OUAI",
             "tipo": "Detox",
             "precio": 14.8,
@@ -18,6 +20,7 @@
         },
         {
             "id": 3,
+            "categoria": "champus",
             "marca": "KÉRASTASE",
             "tipo": "Bain Nutri",
             "precio": 34.2,
@@ -26,6 +29,7 @@
         },
         {
             "id": 4,
+            "categoria": "champus",
             "marca": "GOA ORGANICS",
             "tipo": "Graso",
             "precio": 25.0,
@@ -34,6 +38,7 @@
         },
         {
             "id": 5,
+            "categoria": "champus",
             "marca": "GOA ORGANICS",
             "tipo": "grueso",
             "precio": 34.7,
@@ -42,6 +47,7 @@
         },
         {
             "id": 6,
+            "categoria": "champus",
             "marca": "SOL DE JANEIRO",
             "tipo": "reparador + fortalecedor",
             "precio": 14.5,
@@ -50,6 +56,7 @@
         },
         {
             "id": 7,
+            "categoria": "champus",
             "marca": "FENTY HAIR",
             "tipo": "Reparador hidratante",
             "precio": 16.0,
@@ -58,6 +65,7 @@
         },
         {
             "id": 8,
+            "categoria": "champus",
             "marca": "OUAI",
             "tipo": "Cabello y cuerpo",
             "precio": 43.9,
@@ -66,6 +74,7 @@
         },
         {
             "id": 9,
+            "categoria": "champus",
             "marca": "OUAI",
             "tipo": "Cabello fino",
             "precio": 35.2,
@@ -74,6 +83,7 @@
         },
         {
             "id": 10,
+            "categoria": "champus",
             "marca": "CHAMPO",
             "tipo": "voluminizante",
             "precio": 12.0,
