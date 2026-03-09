@@ -2,73 +2,83 @@
     "cepillos": [
         {
             "id": 1,
-            "marca": "Wet Brush",
-            "tipo": "Desenredante",
-            "precio": 10.5,
-            "tamaño": 25
+            "marca": "FENTY BEAUTY",
+            "tipo": "Fine Linez",
+            "precio": 25,
+            "tamaño": 25,
+            "img":"cepillo1.webp"
         },
         {
             "id": 2,
             "marca": "Tangle Teezer",
-            "tipo": "Compacto",
-            "precio": 14.0,
-            "tamaño": 10
+            "tipo": "Desenredante",
+            "precio": 20,
+            "tamaño": 10,
+            "img":"cepillo2.avif"
         },
         {
             "id": 3,
             "marca": "Denman",
             "tipo": "Definidor de Rizos",
             "precio": 18.0,
-            "tamaño": 22
+            "tamaño": 22,
+            "img":"cepillo3.jpg"
         },
         {
             "id": 4,
             "marca": "GHD",
-            "tipo": "Cilíndrico Térmico",
+            "tipo": "Cepillo volumen",
             "precio": 25.5,
-            "tamaño": 45
+            "tamaño": 45,
+            "img":"cepillo4.avif"
         },
         {
             "id": 5,
-            "marca": "Olivia Garden",
-            "tipo": "Paleta (Paddle)",
-            "precio": 20.0,
-            "tamaño": 26
+            "marca": "AVEDA",
+            "tipo": "Cepillo de madera",
+            "precio": 35.0,
+            "tamaño": 26,
+            "img":"cepillo5.avif"
         },
         {
             "id": 6,
-            "marca": "Mason Pearson",
-            "tipo": "Cerdas de Jabalí",
-            "precio": 120.0,
-            "tamaño": 23
+            "marca": "GHD",
+            "tipo": "Cepillo secador",
+            "precio": 419.0,
+            "tamaño": 23,
+            "img":"cepillo6.avif"
         },
         {
             "id": 7,
-            "marca": "Termix",
-            "tipo": "Esquelético (Vent)",
-            "precio": 8.5,
-            "tamaño": 21
+            "marca": "FENTY HAIR",
+            "tipo": "3 en 1",
+            "precio": 16.5,
+            "tamaño": 21,
+            "img":"cepillo7.avif"
         },
         {
             "id": 8,
-            "marca": "Moroccanoil",
-            "tipo": "Redondo Cerámico",
-            "precio": 22.0,
-            "tamaño": 35
+            "marca": "HAIR RITUEL BY SISLEY",
+            "tipo": "Redondo",
+            "precio": 80.0,
+            "tamaño": 35,
+            "img":"cepillo8.webp"
         },
         {
             "id": 9,
-            "marca": "Beter",
-            "tipo": "Neumático Madera",
-            "precio": 12.0,
-            "tamaño": 24
+            "marca": "SEPHORA COLLECTION",
+            "tipo": "Cepillo de aire",
+            "precio": 69.0,
+            "tamaño": 24,
+            "img":"cepillo9.avif"
         },
         {
             "id": 10,
-            "marca": "Conair",
-            "tipo": "Masajeador Cuero Cabelludo",
-            "precio": 6.5,
-            "tamaño": 8
+            "marca": "TANGLE TEEZER",
+            "tipo": "Compacto",
+            "precio": 16.5,
+            "tamaño": 8,
+            "img":"cepillo10.avif"
         }
     ]
 }

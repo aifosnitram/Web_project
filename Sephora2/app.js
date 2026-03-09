@@ -56,8 +56,8 @@ const renderProducts = (products) => {
    });
 }
 
-function info(){
-   return alert ("aún no definido");
+function info() {
+    return alert("aún no definido");
 }
 
 const searchTop = () => {
@@ -71,10 +71,10 @@ const searchTop = () => {
 
     if (text.length < 3) return;
 
-    const newList = productList.filter(pro => 
-            pro.tipo.toUpperCase().includes(text) ||
-            pro.marca.toUpperCase().includes(text)
-        );
+    const newList = productList.filter(pro =>
+        pro.tipo.toUpperCase().includes(text) ||
+        pro.marca.toUpperCase().includes(text)
+    );
     renderProducts(newList);
 };
 
