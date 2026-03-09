@@ -2,73 +2,93 @@
     "makeup": [
         {
             "id": 1,
-            "marca": "Maybelline",
-            "tipo": "Base Líquida",
-            "precio": 12.5,
-            "tamaño": 30
+            "categoria": "makeup",
+            "marca": "BENEFIT COSMETICS",
+            "tipo": "Colorete líquido",
+            "precio": 32.5,
+            "tamaño": 30,
+            "img": "makeup1.avif"
         },
         {
             "id": 2,
-            "marca": "L'Oréal",
-            "tipo": "Máscara de Pestañas",
-            "precio": 15.0,
-            "tamaño": 10
+            "categoria": "makeup",
+            "marca": "GUERLAIN",
+            "tipo": "Polvos iluminadores",
+            "precio": 60.0,
+            "tamaño": 10,
+            "img": "makeup2.avif"
         },
         {
             "id": 3,
-            "marca": "MAC",
-            "tipo": "Labial Matte",
-            "precio": 22.0,
-            "tamaño": 3
+            "categoria": "makeup",
+            "marca": "GUERLAIN",
+            "tipo": "Tratamiento con color protector",
+            "precio": 52.0,
+            "tamaño": 3,
+            "img": "makeup3.avif"
         },
         {
             "id": 4,
-            "marca": "Clinique",
-            "tipo": "Polvo Compacto",
-            "precio": 28.5,
-            "tamaño": 12
+            "categoria": "makeup",
+            "marca": "SEPHORA COLLECTION",
+            "tipo": "Estrás Individuales",
+            "precio": 8.5,
+            "tamaño": 12,
+            "img": "makeup4.avif"
         },
         {
             "id": 5,
-            "marca": "NARS",
-            "tipo": "Corrector",
+            "categoria": "makeup",
+            "marca": "Clinique",
+            "tipo": "Bronceador",
             "precio": 30.0,
-            "tamaño": 6
+            "tamaño": 6,
+            "img": "makeup5.avif"
         },
         {
             "id": 6,
-            "marca": "Revlon",
-            "tipo": "Delineador",
-            "precio": 9.9,
-            "tamaño": 1
+            "categoria": "makeup",
+            "marca": "GUERLAIN",
+            "tipo": "barra de labios",
+            "precio": 49.9,
+            "tamaño": 1,
+            "img": "makeup6.avif"
         },
         {
             "id": 7,
-            "marca": "Urban Decay",
-            "tipo": "Fijador",
-            "precio": 33.0,
-            "tamaño": 118
+            "categoria": "makeup",
+            "marca": "ARMANI",
+            "tipo": "Fondo de Maquillaje",
+            "precio": 60.0,
+            "tamaño": 118,
+            "img": "makeup7.avif"
         },
         {
             "id": 8,
-            "marca": "Estée Lauder",
-            "tipo": "Prebase",
+            "categoria": "makeup",
+            "marca": "rem beauty",
+            "tipo": "colorete iluminador",
             "precio": 38.0,
-            "tamaño": 30
+            "tamaño": 30,
+            "img": "makeup8.avif"
         },
         {
             "id": 9,
-            "marca": "Fenty Beauty",
-            "tipo": "Iluminador",
-            "precio": 34.0,
-            "tamaño": 8
+            "categoria": "makeup",
+            "marca": "givenchy",
+            "tipo": "correccion de rojeces",
+            "precio": 54.0,
+            "tamaño": 8,
+            "img": "makeup9.webp"
         },
         {
             "id": 10,
-            "marca": "Nyx",
-            "tipo": "Sombras de Ojos",
-            "precio": 18.5,
-            "tamaño": 15
+            "categoria": "makeup",
+            "marca": "prada",
+            "tipo": "corrector",
+            "precio": 38.5,
+            "tamaño": 15,
+            "img": "makeup10.avif"
         }
     ]
 }
