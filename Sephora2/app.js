@@ -61,13 +61,15 @@ function info(){
 }
 
 const searchTop = () => {
-     const text = searchTag.value.toUpperCase();
-    if(text.length === 0){
-        renderProducts(productList);
+    const text = searchTag.value.toUpperCase();
+
+    // Don't render anything until user types at least 3 chars
+    if (text.length === 0) {
+        if (gridTag) gridTag.innerHTML = "";
         return;
     }
 
-    if(text.length<3) return;
+    if (text.length < 3) return;
 
     const newList = productList.filter(pro => 
             pro.tipo.toUpperCase().includes(text) ||
@@ -117,8 +119,8 @@ const init = async () => {
    });
    cartbtn.addEventListener("click", renderCart);
 
- /*    // render initial products if any
-   renderProducts(productList);  */
+   // Only render results once user searches (typing at least 3 chars)
+   if (searchTag) searchTag.addEventListener("input", searchTop);
 }
 init();
 
