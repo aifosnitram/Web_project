@@ -2,73 +2,83 @@
     "champus": [
         {
             "id": 1,
-            "marca": "Head & Shoulders",
-            "tipo": "Anticaspa",
-            "precio": 5.5,
-            "tamaño": 400
+            "marca": "FENTY HAIR",
+            "tipo": "Estuche",
+            "precio": 55.0,
+            "tamaño": 400,
+            "img":"champu1.avif"
         },
         {
             "id": 2,
-            "marca": "Pantene",
-            "tipo": "Nutrición",
-            "precio": 4.8,
-            "tamaño": 350
+            "marca": "OUAI",
+            "tipo": "Detox",
+            "precio": 14.8,
+            "tamaño": 350,
+            "img":"champu2.avif"
         },
         {
             "id": 3,
-            "marca": "Garnier Fructis",
-            "tipo": "Fuerza y crecimiento",
-            "precio": 4.2,
-            "tamaño": 300
+            "marca": "KÉRASTASE",
+            "tipo": "Bain Nutri",
+            "precio": 34.2,
+            "tamaño": 300,
+            "img":"champu3.avif"
         },
         {
             "id": 4,
-            "marca": "L'Oréal Elvive",
-            "tipo": "Reparación",
-            "precio": 5.0,
-            "tamaño": 400
+            "marca": "GOA ORGANICS",
+            "tipo": "Graso",
+            "precio": 25.0,
+            "tamaño": 400,
+            "img":"champu4.avif"
         },
         {
             "id": 5,
-            "marca": "Dove",
-            "tipo": "Hidratación",
-            "precio": 4.7,
-            "tamaño": 350
+            "marca": "GOA ORGANICS",
+            "tipo": "grueso",
+            "precio": 34.7,
+            "tamaño": 350,
+            "img":"champu4.webp"
         },
         {
             "id": 6,
-            "marca": "Herbal Essences",
-            "tipo": "Suavidad",
-            "precio": 4.5,
-            "tamaño": 400
+            "marca": "SOL DE JANEIRO",
+            "tipo": "reparador + fortalecedor",
+            "precio": 14.5,
+            "tamaño": 400,
+            "img":"champu6.avif"
         },
         {
             "id": 7,
-            "marca": "Tresemmé",
-            "tipo": "Brillo intenso",
-            "precio": 6.0,
-            "tamaño": 500
+            "marca": "FENTY HAIR",
+            "tipo": "Reparador hidratante",
+            "precio": 16.0,
+            "tamaño": 500,
+            "img":"champu7.avif"
         },
         {
             "id": 8,
-            "marca": "Seda",
-            "tipo": "Cabello dañado",
-            "precio": 3.9,
-            "tamaño": 350
+            "marca": "OUAI",
+            "tipo": "Cabello y cuerpo",
+            "precio": 43.9,
+            "tamaño": 350,
+            "img":"champu8.avif"
         },
         {
             "id": 9,
-            "marca": "Aussie",
-            "tipo": "Cabello seco",
-            "precio": 5.2,
-            "tamaño": 400
+            "marca": "OUAI",
+            "tipo": "Cabello fino",
+            "precio": 35.2,
+            "tamaño": 400,
+            "img":"champu9.avif"
         },
         {
             "id": 10,
-            "marca": "Nivea",
-            "tipo": "Cuidado diario",
-            "precio": 4.3,
-            "tamaño": 300
+            "marca": "CHAMPO",
+            "tipo": "voluminizante",
+            "precio": 12.0,
+            "tamaño": 300,
+            "img":"champu10.webp"
         }
     ]
 }
