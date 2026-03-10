@@ -17,6 +17,15 @@
   </head>
 
   <body>
+    <div id="cart-panel" class="cart-panel">
+      <h2><i class="fa-solid fa-bag-shopping"></i> Carrito</h2>
+
+      <ul class="cart-items"></ul>
+
+      <p class="cart-total"><strong>Total: 0€</strong></p>
+
+      <button class="buy-btn">Comprar</button>
+    </div>
     <!-- HEADER -->
     <header class="header">
       <div class="header-top">
@@ -62,98 +71,111 @@
     </header>
 
     <!-- HERO -->
-    <section class="hero">
-      <div class="hero-content">
-        <div class="hero-products">
-          <img src="./img/SW_DESKTOP_KBEAUTYNEW.avif" />
-        </div>
-
-        <div class="hero-card">
-          <h2>
-            Sephora Goodie bag <br />
-            ¡Solo en APP!
-          </h2>
-
-          <div class="mini-box">
-            <strong>6 minis gratis*</strong>
-            <p>
-              por compras >99€ <br />
-              Código: BAG
-            </p>
+    <section>
+      <section class="hero">
+        <div class="hero-content">
+          <div class="hero-products">
+            <img src="./img/SW_DESKTOP_KBEAUTYNEW.avif" />
           </div>
 
-          <button class="btn">Comprar</button>
+          <div class="hero-card">
+            <h2>
+              Sephora Goodie bag <br />
+              ¡Solo en APP!
+            </h2>
 
-          <p class="conditions">*Consultar condiciones aquí.</p>
+            <div class="mini-box">
+              <strong>6 minis gratis*</strong>
+              <p>
+                por compras >99€ <br />
+                Código: BAG
+              </p>
+            </div>
+
+            <button class="btn">Comprar</button>
+
+            <p class="conditions">*Consultar condiciones aquí.</p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="product-grid"></section>
+      <section class="product-grid"></section>
 
-    <!-- PROMOS -->
-    <section class="promos">
-      <div class="promo-card">
-        <img src="./img/UNDERBANNER_NOVEDADESW9.avif" />
+      <!-- PROMOS -->
+      <section class="promos">
+        <div class="promo-card">
+          <img src="./img/UNDERBANNER_NOVEDADESW9.avif" />
 
-        <div class="promo-text">
-          <h3>Novedades Korean Skincare</h3>
-          <p>Descubre las marcas Medicube, Biodance, Anua y muchas más.</p>
-          <button>Descubrir</button>
-        </div>
-      </div>
-
-      <div class="promo-card">
-        <img src="./img/UNDERBANNER_LANEIGEWATERBANK_AQUAFACIAL_SERUM.avif" />
-
-        <div class="promo-text">
-          <h3>Novedad LANEIGE</h3>
-          <p>Un sérum hidratante con AHA y BHA para un brillo glass skin.</p>
-          <button>Comprar</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- PRODUCTOS -->
-    <section class="products">
-      <div class="products-header">
-        <h2>Korean & Japanese skincare</h2>
-        <button class="see-all">Ver todo</button>
-      </div>
-
-      <div class="product-grid">
-        <div class="product">
-          <span class="badge">Novedad</span>
-          <i class="fa fa-heart heart"></i>
-          <img src="./img/medicube.avif" />
-          <p class="product-name">Medicube Serum</p>
-          <p class="price">29,99€</p>
+          <div class="promo-text">
+            <h3>Novedades Korean Skincare</h3>
+            <p>Descubre las marcas Medicube, Biodance, Anua y muchas más.</p>
+            <button>Descubrir</button>
+          </div>
         </div>
 
-        <div class="product">
-          <span class="badge">Novedad</span>
-          <i class="fa fa-heart heart"></i>
-          <img src="./img/anua_toner.avif" />
-          <p class="product-name">Anua Toner</p>
-          <p class="price">24,99€</p>
+        <div class="promo-card">
+          <img src="./img/UNDERBANNER_LANEIGEWATERBANK_AQUAFACIAL_SERUM.avif" />
+
+          <div class="promo-text">
+            <h3>Novedad LANEIGE</h3>
+            <p>Un sérum hidratante con AHA y BHA para un brillo glass skin.</p>
+            <button>Comprar</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRODUCTOS -->
+      <section class="products">
+        <div class="products-header">
+          <h2>Korean & Japanese skincare</h2>
+          <button class="see-all">Ver todo</button>
         </div>
 
-        <div class="product">
-          <span class="badge">Novedad</span>
-          <i class="fa fa-heart heart"></i>
-          <img src="./img/aestura_kit.avif" />
-          <p class="product-name">Aestura Kit</p>
-          <p class="price">39,99€</p>
-        </div>
+        <div class="product-grid">
+          <div class="product">
+            <span class="badge">Novedad</span>
+            <i class="fa fa-heart heart"></i>
+            <img src="./img/medicube.avif" />
+            <p class="product-name">Medicube Serum</p>
+            <p class="price">29,99€</p>
+          </div>
 
-        <div class="product">
-          <span class="badge">Novedad</span>
-          <i class="fa fa-heart heart"></i>
-          <img src="./img/eborean.avif" />
-          <p class="product-name">Erborian CC Cream</p>
-          <p class="price">34,99€</p>
+          <div class="product">
+            <span class="badge">Novedad</span>
+            <i class="fa fa-heart heart"></i>
+            <img src="./img/anua_toner.avif" />
+            <p class="product-name">Anua Toner</p>
+            <p class="price">24,99€</p>
+          </div>
+
+          <div class="product">
+            <span class="badge">Novedad</span>
+            <i class="fa fa-heart heart"></i>
+            <img src="./img/aestura_kit.avif" />
+            <p class="product-name">Aestura Kit</p>
+            <p class="price">39,99€</p>
+          </div>
+
+          <div class="product">
+            <span class="badge">Novedad</span>
+            <i class="fa fa-heart heart"></i>
+            <img src="./img/eborean.avif" />
+            <p class="product-name">Erborian CC Cream</p>
+            <p class="price">34,99€</p>
+          </div>
         </div>
-      </div>
+      </section>
+      <section class="container">
+        <aside class="carrito">
+          <h2><i class="fa fa-bag-shopping"></i> Carrito</h2>
+
+          <ul class="cart-items"></ul>
+
+          <p class="cart-total"><strong>Total: 0€</strong></p>
+
+          <button class="buy-btn">Comprar</button>
+        </aside>
+      </section>
     </section>
     <!-- NEWSLETTER -->
 
