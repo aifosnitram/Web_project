@@ -2,73 +2,93 @@
     "skincare": [
         {
             "id": 1,
-            "marca": "CeraVe",
-            "tipo": "Limpiador Hidratante",
+            "categoria": "skincare",
+            "marca": "Anua",
+            "tipo": "Limpiador Purificante",
             "precio": 14.5,
-            "tamaño": 473
+            "tamaño": 473,
+            "img": "skincare1.avif"
         },
         {
             "id": 2,
-            "marca": "The Ordinary",
-            "tipo": "Sérum Niacinamida",
-            "precio": 7.8,
-            "tamaño": 30
+            "categoria": "skincare",
+            "marca": "Anua",
+            "tipo": "Tónico Iluminador",
+            "precio": 17.8,
+            "tamaño": 30,
+            "img": "skincare2.avif"
         },
         {
             "id": 3,
-            "marca": "La Roche-Posay",
-            "tipo": "Protector Solar SPF50",
-            "precio": 19.5,
-            "tamaño": 50
+            "categoria": "skincare",
+            "marca": "CAUDALIE",
+            "tipo": "Set Serum & Gelatina",
+            "precio": 29.5,
+            "tamaño": 50,
+            "img": "skincare3.avif"
         },
         {
             "id": 4,
-            "marca": "Neutrogena",
-            "tipo": "Gel Hydro Boost",
+            "categoria": "skincare",
+            "marca": "AESTURA",
+            "tipo": "Limpiador en espuma",
             "precio": 16.0,
-            "tamaño": 50
+            "tamaño": 50,
+            "img": "skincare4.avif"
         },
         {
             "id": 5,
-            "marca": "Kiehl's",
-            "tipo": "Contorno de Ojos",
-            "precio": 32.0,
-            "tamaño": 14
+            "categoria": "skincare",
+            "marca": "BYOMA",
+            "tipo": "Gel limpiador",
+            "precio": 12.0,
+            "tamaño": 14,
+            "img": "skincare5.avif"
         },
         {
             "id": 6,
-            "marca": "Bioderma",
-            "tipo": "Agua Micelar",
-            "precio": 15.5,
-            "tamaño": 500
+            "categoria": "skincare",
+            "marca": "Biodance",
+            "tipo": "Mascarilla iluminadora",
+            "precio": 25.5,
+            "tamaño": 500,
+            "img": "skincare6.avif"
         },
         {
             "id": 7,
-            "marca": "Vichy",
-            "tipo": "Sérum Mineral 89",
+            "categoria": "skincare",
+            "marca": "Biodance",
+            "tipo": "Mascarilla calmante",
             "precio": 24.0,
-            "tamaño": 50
+            "tamaño": 50,
+            "img": "skincare7.avif"
         },
         {
             "id": 8,
-            "marca": "Eucerin",
-            "tipo": "Crema Antimanchas",
+            "categoria": "skincare",
+            "marca": "NUXE",
+            "tipo": "Desmaquillante ojos y labios",
             "precio": 28.5,
-            "tamaño": 50
+            "tamaño": 50,
+            "img": "skincare8.avif"
         },
         {
             "id": 9,
-            "marca": "Glossier",
-            "tipo": "Bálsamo Labial",
-            "precio": 12.0,
-            "tamaño": 15
+            "categoria": "skincare",
+            "marca": "DIOR",
+            "tipo": "Loción de rostro",
+            "precio": 42.0,
+            "tamaño": 15,
+            "img": "skincare9.avif"
         },
         {
             "id": 10,
-            "marca": "Paula's Choice",
-            "tipo": "Exfoliante BHA",
-            "precio": 34.0,
-            "tamaño": 118
+            "categoria": "skincare",
+            "marca": "SISLEY",
+            "tipo": "Limpiador facial",
+            "precio": 94.0,
+            "tamaño": 118,
+            "img": "skincare10.avif"
         }
     ]
 }

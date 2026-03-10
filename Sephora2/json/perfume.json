@@ -2,73 +2,93 @@
     "perfume": [
         {
             "id": 1,
-            "marca": "Dior",
-            "tipo": "Sauvage (Hombre)",
-            "precio": 95.0,
-            "tamaño": 100
+            "categoria": "perfume",
+            "marca": "Chanel",
+            "tipo": "N5 (Mujer)",
+            "precio": 150.0,
+            "tamaño": 100,
+            "img": "perfume1.avif"
         },
         {
             "id": 2,
+            "categoria": "perfume",
             "marca": "Chanel",
-            "tipo": "Nº 5 (Mujer)",
-            "precio": 125.0,
-            "tamaño": 50
+            "tipo": "Splendide",
+            "precio": 80.0,
+            "tamaño": 50,
+            "img": "perfume2.avif"
         },
         {
             "id": 3,
+            "categoria": "perfume",
             "marca": "Giorgio Armani",
             "tipo": "Acqua di Gio (Hombre)",
             "precio": 85.5,
-            "tamaño": 75
+            "tamaño": 75,
+            "img": "perfume3.webp"
         },
         {
             "id": 4,
+            "categoria": "perfume",
             "marca": "Carolina Herrera",
             "tipo": "Good Girl (Mujer)",
             "precio": 110.0,
-            "tamaño": 80
+            "tamaño": 80,
+            "img": "perfume4.avif"
         },
         {
             "id": 5,
+            "categoria": "perfume",
             "marca": "Paco Rabanne",
             "tipo": "1 Million (Hombre)",
             "precio": 78.0,
-            "tamaño": 100
+            "tamaño": 100,
+            "img": "perfume5.avif"
         },
         {
             "id": 6,
+            "categoria": "perfume",
             "marca": "Yves Saint Laurent",
             "tipo": "Libre (Mujer)",
             "precio": 105.0,
-            "tamaño": 90
+            "tamaño": 90,
+            "img": "perfume6.avif"
         },
         {
             "id": 7,
+            "categoria": "perfume",
             "marca": "Hugo Boss",
             "tipo": "Boss Bottled (Hombre)",
             "precio": 72.0,
-            "tamaño": 100
+            "tamaño": 100,
+            "img": "perfume7.webp"
         },
         {
             "id": 8,
+            "categoria": "perfume",
             "marca": "Lancôme",
             "tipo": "La Vie Est Belle (Mujer)",
             "precio": 98.0,
-            "tamaño": 75
+            "tamaño": 75,
+            "img": "perfume8.avif"
         },
         {
             "id": 9,
+            "categoria": "perfume",
             "marca": "Versace",
             "tipo": "Eros (Hombre)",
             "precio": 82.0,
-            "tamaño": 100
+            "tamaño": 100,
+            "img": "perfume9.avif"
         },
         {
             "id": 10,
+            "categoria": "perfume",
             "marca": "Marc Jacobs",
-            "tipo": "Daisy (Mujer)",
+            "tipo": "Perfect",
             "precio": 88.0,
-            "tamaño": 50
+            "tamaño": 50,
+            "img": "perfume10.webp"
         }
     ]
 }
