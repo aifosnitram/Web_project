@@ -17,14 +17,49 @@
   </head>
 
   <body>
+    <!-- ================= LOGIN PANEL ================= -->
+    <div id="login-panel" class="side-panel">
+      <h2>Login</h2>
+
+      <input type="text" id="username" placeholder="Usuario" />
+      <input type="password" id="password" placeholder="Contraseña" />
+
+      <button onclick="login()">Iniciar sesión</button>
+      <button onclick="logout()">Cerrar sesión</button>
+
+      <p id="user-text">No logueado</p>
+    </div>
+
+    <!-- ================= PRODUCT MODAL ================= -->
+    <div id="product-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+
+        <img id="modal-img" />
+        <h2 id="modal-title"></h2>
+        <p id="modal-brand"></p>
+        <p id="modal-desc"></p>
+        <h3 id="modal-price"></h3>
+
+        <button onclick="addToCartFromModal()">Añadir al carrito</button>
+      </div>
+    </div>
     <div id="cart-panel" class="cart-panel">
       <h2><i class="fa-solid fa-bag-shopping"></i> Carrito</h2>
 
+      <!-- LISTA DE PRODUCTOS -->
       <ul class="cart-items"></ul>
 
+      <!-- TOTAL -->
       <p class="cart-total"><strong>Total: 0€</strong></p>
 
+      <!-- CÓDIGO DESCUENTO -->
+      <input type="text" id="codigo" placeholder="Código descuento" />
+      <button onclick="aplicarCodigo()">Aplicar código</button>
+
+      <!-- BOTONES -->
       <button class="buy-btn">Comprar</button>
+      <button onclick="deleteCart()">Vaciar carrito</button>
     </div>
     <!-- HEADER -->
     <header class="header">
@@ -43,7 +78,7 @@
           </div>
 
           <div class="icon">
-            <i class="fa fa-user"></i>
+            <i class="fa fa-user" onclick="toggleLogin()"></i>
             <span>Inicia sesión</span>
           </div>
 
