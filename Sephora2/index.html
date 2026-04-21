@@ -13,7 +13,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
 
-    <script defer src="app.js"></script>
+    <script type="module" src="app.js"></script>
   </head>
 
   <body>
@@ -74,15 +74,15 @@
         <div class="header-icons">
           <div class="icon">
             <i class="fa fa-location-dot"></i>
-            <span>Tiendas & Servicios</span>
           </div>
 
           <div class="icon">
             <i class="fa fa-user" onclick="toggleLogin()"></i>
-            <span>Inicia sesión</span>
           </div>
 
-          <i class="fa fa-heart"></i>
+          <div class="icon">
+            <i id="fav-button" class="fa fa-heart"></i>
+          </div>
           <i id="cart-button" class="fa fa-bag-shopping"></i>
         </div>
       </div>
@@ -134,7 +134,7 @@
         </div>
       </section>
 
-      <section class="product-grid"></section>
+      <section class="product-grid" id="dynamic-grid"></section>
 
       <!-- PROMOS -->
       <section class="promos">
