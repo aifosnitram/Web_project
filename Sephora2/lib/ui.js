@@ -5,22 +5,22 @@ export const UI = {
     container.innerHTML = "";
 
     if (products.length === 0) {
-      container.innerHTML = `<p style="grid-column:1/-1; text-align:center; padding:40px; color:#999;">No se encontraron productos.</p>`;
+      container.innerHTML = `<p>No se encontraron productos.</p>`;
       return;
     }
 
     products.forEach((p) => {
       const isFav = favorites.includes(p.id);
       container.innerHTML += `
-        <article data-id="${p.id}" style="cursor:pointer;">
+        <div class="product" data-id="${p.id}">
           <span class="badge">${p.categoria || "Novedad"}</span>
           <i class="fa fa-heart heart${isFav ? " active" : ""}"></i>
           <img src="./img/${p.categoria}/${p.img}" alt="${p.tipo}" />
           <p class="product-name">${p.tipo}</p>
-          <p style="font-size:13px; color:#888;">${p.marca}</p>
+          <p>${p.marca}</p>
           <p class="price">${p.precio}€</p>
-          <button class="add-cart" onclick="event.stopPropagation()">Añadir al carrito</button>
-        </article>
+          <button class="add-cart">Añadir al carrito</button>
+        </div>
       `;
     });
   },

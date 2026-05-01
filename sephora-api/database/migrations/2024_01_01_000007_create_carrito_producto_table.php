@@ -1,0 +1,26 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::create('carrito_producto', function (Blueprint $table) {
+            $table->foreignId('carrito_id')->constrained('carritos')->onDelete('cascade');
+            $table->foreignId('producto_id')->constrained('productos')->onDelete('cascade');
+            $table->integer('cantidad');
+            $table->decimal('pxq', 10, 2); // Precio por cantidad (total)
+            $table->timestamps();
+            
+            $table->primary(['carrito_id', 'producto_id']);
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::dropIfExists('carrito_producto');
+    }
+};

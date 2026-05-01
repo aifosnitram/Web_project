@@ -58,9 +58,38 @@ const init = async () => {
     loginPanel.classList.remove("open");
   });
 
+  // Botones de comprar
+  document.querySelectorAll('.buy-btn').forEach(btn => {
+     btn.addEventListener('click', async () => {
+        const userId = Storage.get("user_id");
+        if (!userId) {
+            alert('Por favor inicie sesión para comprar');
+            toggleLogin();
+            return;
+        }
+        const cartItems = Cart.get();
+        if (cartItems.length === 0) {
+            alert('El carrito está vacío');
+            return;
+        }
+        
+        const totalText = totalTag.innerText;
+        const total = parseFloat(totalText.replace('Total: ', '').replace('€', '').trim().replace(',', '.')) || 0;
+        
+        const success = await API.saveOrder(userId, cartItems, total);
+        if (success) {
+            alert('Pedido realizado con éxito!');
+            deleteCart();
+            cartPanel.classList.remove("open");
+        } else {
+            alert('Error al realizar el pedido.');
+        }
+     });
+  });
+
   // Delegación de eventos en el grid dinámico
   gridTag.addEventListener("click", (e) => {
-    const article = e.target.closest("article");
+    const article = e.target.closest(".product");
     if (!article) return;
 
     const id = parseInt(article.dataset.id);
@@ -169,17 +198,41 @@ window.toggleLogin = (e) => {
   cartPanel.classList.remove("open");
 };
 
-window.login = () => {
+window.login = async () => {
   const user = document.getElementById("username").value.trim();
-  if (user) {
-    Storage.set("user", user);
-    document.getElementById("user-text").innerText = `Hola, ${user}`;
+  const pass = document.getElementById("password").value.trim();
+  if (user && pass) {
+    let result = await API.login(user, pass);
+    if (!result || result.error) {
+       if (confirm('Usuario no encontrado o credenciales inválidas. ¿Deseas registrarte con este email?')) {
+           const nombre = prompt("Nombre:");
+           const apellido = prompt("Apellido:");
+           const telf = prompt("Teléfono:");
+           const direccion = prompt("Dirección:");
+           
+           result = await API.register({ email: user, password: pass, nombre, apellido, telf, direccion });
+           if (!result || result.error) {
+              alert("Falló el registro");
+              return;
+           }
+           alert("Registro exitoso!");
+       } else {
+           return;
+       }
+    }
+    const nombreUsuario = result.persona ? result.persona.nombre : user;
+    Storage.set("user", nombreUsuario);
+    Storage.set("user_id", result.id);
+    document.getElementById("user-text").innerText = `Hola, ${nombreUsuario}`;
     loginPanel.classList.remove("open");
+  } else {
+     alert("Ingresa usuario y contraseña");
   }
 };
 
 window.logout = () => {
   Storage.remove("user");
+  Storage.remove("user_id");
   document.getElementById("user-text").innerText = "No logueado";
 };
 
