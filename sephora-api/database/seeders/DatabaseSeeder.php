@@ -21,7 +21,14 @@ class DatabaseSeeder extends Seeder
         }
 
         $marcas = ['Sephora Collection', 'Fenty Beauty', 'Rare Beauty', 'Dior', 'Chanel', 'Charlotte Tilbury', 'Olaplex', 'The Ordinary', 'Tarte', 'Huda Beauty'];
-        $nombresCosmetica = ['Crema Facial', 'Sérum Iluminador', 'Paleta de Sombras', 'Labial Mate', 'Base de Maquillaje', 'Corrector', 'Máscara de Pestañas', 'Perfume Floral', 'Aceite Capilar', 'Exfoliante Corporal', 'Agua Micelar', 'Protector Solar'];
+        
+        $nombresCosmetica = [
+            'perfumes' => ['Perfume Floral', 'Eau de Parfum', 'Fragancia Cítrica', 'Bruma Corporal'],
+            'skincare' => ['Crema Facial', 'Sérum Iluminador', 'Agua Micelar', 'Protector Solar', 'Tónico Equilibrante'],
+            'makeup' => ['Paleta de Sombras', 'Labial Mate', 'Base de Maquillaje', 'Corrector', 'Máscara de Pestañas'],
+            'cabello' => ['Aceite Capilar', 'Champú Reparador', 'Mascarilla Capilar', 'Acondicionador', 'Sérum Antifrizz'],
+            'cuerpo' => ['Exfoliante Corporal', 'Gel de Ducha', 'Loción Hidratante', 'Manteca Corporal', 'Cepillo Exfoliante']
+        ];
 
         $imagesByCategory = [
             'perfumes' => ['perfume1.avif', 'perfume2.avif', 'perfume3.webp', 'perfume4.avif', 'perfume5.avif', 'perfume6.avif', 'perfume7.webp', 'perfume8.avif', 'perfume9.avif', 'perfume10.webp'],
@@ -33,11 +40,18 @@ class DatabaseSeeder extends Seeder
 
         for ($i = 0; $i < 50; $i++) {
             $cat = $categorias[array_rand($categorias)];
-            $catImages = $imagesByCategory[$cat->nombre];
+            $catName = $cat->nombre;
+            
+            $catImages = $imagesByCategory[$catName];
             $selectedImg = $catImages[array_rand($catImages)];
 
+            $catProductNames = $nombresCosmetica[$catName];
+            $selectedProductName = $catProductNames[array_rand($catProductNames)];
+
+            $nombreCompleto = $marcas[array_rand($marcas)] . ' - ' . $selectedProductName;
+
             Producto::create([
-                'nombre' => $marcas[array_rand($marcas)] . ' - ' . $nombresCosmetica[array_rand($nombresCosmetica)],
+                'nombre' => $nombreCompleto,
                 'precio' => $faker->randomFloat(2, 5, 200),
                 'img' => $selectedImg,
                 'categoria_id' => $cat->id,
