@@ -8,28 +8,31 @@ export const API = {
       // Map API data to Frontend format: 
       // The frontend expects p.tipo, p.marca, p.img, p.categoria, p.precio, p.descripcion
       return data.map(p => {
-        // We simulate the frontend structure based on the "nombre" field
-        const parts = p.nombre.split(' - ');
-        const marca = parts[0] || 'Marca';
-        const tipo = parts[1] || p.nombre;
-        let categoriaName = p.categoria ? p.categoria.nombre : 'cosmetica';
-        
-        // El frontend ui.js concatena: `./img/${p.categoria}/${p.img}`
-        // Ajustamos p.categoria para que coincida con las carpetas exactas:
-        if (categoriaName === 'perfumes') categoriaName = 'perfume';
-        if (categoriaName === 'cabello') categoriaName = 'Champus';
-        if (categoriaName === 'cuerpo') categoriaName = 'Cepillos';
-        
-        return {
-          id: p.id,
-          tipo: tipo,
-          marca: marca,
-          precio: parseFloat(p.precio),
-          img: p.img || 'default.jpg',
-          categoria: categoriaName,
-          descripcion: p.nombre
-        };
-      });
+            const parts = p.nombre.split(' - ');
+            const marca = parts[0] || 'Marca';
+            const tipo = parts[1] || p.nombre;
+
+            // Map categoria_id to the folder names used in ./img/${categoria}/${img}
+            const categoriaMap = {
+                1: 'cepillos',
+                2: 'champus',
+                3: 'makeup',
+                4: 'perfume',
+                5: 'skincare'
+            };
+
+            const categoriaName = categoriaMap[p.categoria_id] || 'cosmetica';
+
+            return {
+                id: p.id,
+                tipo: tipo,
+                marca: marca,
+                precio: parseFloat(p.precio),
+                img: p.img || 'default.jpg',
+                categoria: categoriaName,
+                descripcion: p.nombre
+            };
+        });
     } catch (error) {
       console.error("Error cargando productos:", error);
       return [];
