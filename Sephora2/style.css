@@ -58,27 +58,65 @@ body {
 }
 
 /* MENU */
-
 .menu {
-  display: flex;
-  gap: 20px;
-  padding: 15px 40px;
-  font-size: 14px;
-  overflow: auto;
+  background: white;
+  border-bottom: 1px solid #eee;
+  position: relative;
 }
 
-.menu a {
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  padding: 15px 40px;
+  margin: 0;
+}
+
+.nav-list > li {
+  position: relative;
+}
+
+.nav-list a {
   text-decoration: none;
   color: black;
+  font-size: 14px;
+  font-weight: 500;
   white-space: nowrap;
 }
 
-.menu .red {
-  color: #e60023;
+.nav-list .pink {
+  color: #ff0080;
 }
 
-.menu .pink {
-  color: #ff0080;
+/* Dropdown logic */
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  list-style: none;
+  padding: 15px 0;
+  min-width: 200px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  border: 1px solid #eee;
+  display: none;
+  z-index: 1000;
+}
+
+.submenu li {
+  padding: 8px 20px;
+}
+
+.submenu li:hover {
+  background: #f6f6f6;
+}
+
+.has-submenu:hover .submenu {
+  display: block;
+}
+
+.main-cat:hover {
+  text-decoration: underline;
 }
 
 /* ICONO CARRITO */
@@ -140,7 +178,10 @@ body {
 }
 
 .hero-products img {
-  max-width: 400px;
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  margin: 0 auto;
 }
 
 .hero-card {
@@ -253,6 +294,27 @@ body {
 .price {
   font-weight: bold;
   margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.add-cart {
+  width: 100%;
+  background: black;
+  color: white;
+  border: 1px solid black;
+  padding: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0;
+}
+
+.add-cart:hover {
+  background: white;
+  color: black;
 }
 
 /* RESPONSIVE */
@@ -525,20 +587,58 @@ body {
   border: 1px solid #eee;
 }
 
+.btn-promo {
+   background: var(--white);
+   color: var(--black);
+   border: 2px solid var(--black);
+   padding: 10px 20px;
+   font-weight: 800;
+   cursor: pointer;
+   text-transform: uppercase;
+   font-size: 11px;
+   letter-spacing: 1px;
+   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ }
+ 
+ .btn-promo:hover {
+   background: var(--black);
+   color: var(--white);
+   transform: scale(1.05);
+ }
+
 .buy-btn {
-  margin-top: 10px;
+  margin-top: 15px;
   background: black;
   color: white;
-  border: none;
-  padding: 12px;
-  border-radius: 8px;
+  border: 2px solid black;
+  padding: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   cursor: pointer;
   width: 100%;
-  transition: 0.2s;
+  transition: all 0.3s ease;
 }
 
 .buy-btn:hover {
-  transform: scale(1.03);
+  background: white;
+  color: black;
+  transform: translateY(-2px);
+}
+
+.cart-panel button[onclick="deleteCart()"] {
+  background: none;
+  border: none;
+  color: #999;
+  text-decoration: underline;
+  width: 100%;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.cart-panel button[onclick="deleteCart()"]:hover {
+  color: red;
 }
 
 /* RESPONSIVE */

@@ -1,233 +1,280 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Sephora Clone</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="style.css" />
+  <title>Sephora Clone</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+  <link rel="stylesheet" href="style.css" />
 
-    <script type="module" src="app.js"></script>
-  </head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <body>
-    <!-- ================= LOGIN PANEL ================= -->
-    <div id="login-panel" class="side-panel">
-      <h2>Login</h2>
+  <script type="module" src="app.js"></script>
 
-      <input type="text" id="username" placeholder="Usuario" />
-      <input type="password" id="password" placeholder="Contraseña" />
+  <a href="cesta_nueva.html"></a>
+  <a href="login_nuevo.html"></a>
+</head>
 
-      <button onclick="login()">Iniciar sesión</button>
-      <button onclick="logout()">Cerrar sesión</button>
+<body>
+  <!-- ================= LOGIN PANEL ================= -->
+  <div id="login-panel" class="side-panel">
+    <h2>Login</h2>
 
-      <p id="user-text">No logueado</p>
+    <input type="text" id="username" placeholder="Usuario" />
+    <input type="password" id="password" placeholder="Contraseña" />
+
+    <button onclick="login()">Iniciar sesión</button>
+    <button onclick="logout()">Cerrar sesión</button>
+
+    <p id="user-text">No logueado</p>
+  </div>
+
+  <!-- ================= PRODUCT MODAL ================= -->
+  <div id="product-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+
+      <img id="modal-img" />
+      <h2 id="modal-title"></h2>
+      <p id="modal-brand"></p>
+      <p id="modal-desc"></p>
+      <h3 id="modal-price"></h3>
+
+      <button onclick="addToCartFromModal()">Añadir al carrito</button>
     </div>
+  </div>
+  <div id="cart-panel" class="cart-panel">
+    <h2><i class="fa-solid fa-bag-shopping"></i> Carrito</h2>
 
-    <!-- ================= PRODUCT MODAL ================= -->
-    <div id="product-modal" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
+    <!-- LISTA DE PRODUCTOS -->
+    <ul class="cart-items"></ul>
 
-        <img id="modal-img" />
-        <h2 id="modal-title"></h2>
-        <p id="modal-brand"></p>
-        <p id="modal-desc"></p>
-        <h3 id="modal-price"></h3>
+    <!-- TOTAL -->
+    <p class="cart-total"><strong>Total: 0€</strong></p>
 
-        <button onclick="addToCartFromModal()">Añadir al carrito</button>
+    <!-- CÓDIGO DESCUENTO -->
+    <input type="text" id="codigo" placeholder="Código descuento" />
+    <button onclick="aplicarCodigo()">Aplicar código</button>
+
+    <!-- BOTONES -->
+    <button class="buy-btn">Comprar</button>
+    <button onclick="deleteCart()">Vaciar carrito</button>
+  </div>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <h1 class="logo">SEPHORA</h1>
+
+      <div class="search">
+        <i class="fa fa-search"></i>
+        <input type="text" placeholder="Busca un producto, una marca..." />
       </div>
-    </div>
-    <div id="cart-panel" class="cart-panel">
-      <h2><i class="fa-solid fa-bag-shopping"></i> Carrito</h2>
 
-      <!-- LISTA DE PRODUCTOS -->
-      <ul class="cart-items"></ul>
-
-      <!-- TOTAL -->
-      <p class="cart-total"><strong>Total: 0€</strong></p>
-
-      <!-- CÓDIGO DESCUENTO -->
-      <input type="text" id="codigo" placeholder="Código descuento" />
-      <button onclick="aplicarCodigo()">Aplicar código</button>
-
-      <!-- BOTONES -->
-      <button class="buy-btn">Comprar</button>
-      <button onclick="deleteCart()">Vaciar carrito</button>
-    </div>
-    <!-- HEADER -->
-    <header class="header">
-      <div class="header-top">
-        <h1 class="logo">SEPHORA</h1>
-
-        <div class="search">
-          <i class="fa fa-search"></i>
-          <input type="text" placeholder="Busca un producto, una marca..." />
+      <div class="header-icons">
+        <div class="icon">
+          <i class="fa fa-location-dot"></i>
         </div>
 
-        <div class="header-icons">
-          <div class="icon">
-            <i class="fa fa-location-dot"></i>
-          </div>
+        <div class="icon">
+          <i class="fa fa-user" onclick="toggleLogin()"></i>
+        </div>
 
-          <div class="icon">
-            <i class="fa fa-user" onclick="toggleLogin()"></i>
-          </div>
-
-          <div class="icon">
-            <i id="fav-button" class="fa fa-heart"></i>
-          </div>
+        <div class="icon">
+          <i id="fav-button" class="fa fa-heart"></i>
+        </div>
+        <a href="cesta_nueva.html" style="color: inherit; text-decoration: none;">
           <i id="cart-button" class="fa fa-bag-shopping"></i>
-        </div>
+        </a>
       </div>
+    </div>
 
-      <!-- MENU -->
-      <nav class="menu">
-        <a href="#">Día del Padre</a>
-        <a href="#">Solo en Sephora</a>
-        <a href="#">Marcas</a>
-        <a href="#">New & Trending</a>
-        <a class="red" href="#">Beauty Ofertas</a>
-        <a href="#">Maquillaje</a>
-        <a href="#">Tratamiento</a>
-        <a href="#">Perfume</a>
-        <a href="#">Cabello</a>
-        <a href="#">Cuerpo</a>
-        <a class="pink" href="#">Sephora Collection</a>
-        <a href="#">Blog</a>
-        <a href="#">Servicios</a>
-      </nav>
-    </header>
+    <!-- MENU -->
+    <nav class="menu">
+      <ul class="nav-list">
+        <li><a href="#">Día del Padre</a></li>
+        <li><a href="#">Solo en Sephora</a></li>
+        <li><a href="#">Marcas</a></li>
 
-    <!-- HERO -->
-    <section>
-      <section class="hero">
-        <div class="hero-content">
-          <div class="hero-products">
-            <img src="./img/SW_DESKTOP_KBEAUTYNEW.avif" />
-          </div>
+        <li class="has-submenu">
+          <a href="#" class="main-cat" data-id="3">Maquillaje</a>
+          <ul class="submenu">
+            <li><a href="#">Rostro</a></li>
+            <li><a href="#">Ojos</a></li>
+            <li><a href="#">Labios</a></li>
+            <li><a href="#">Paletas</a></li>
+          </ul>
+        </li>
 
-          <div class="hero-card">
-            <h2>
-              Sephora Goodie bag <br />
-              ¡Solo en APP!
-            </h2>
+        <li class="has-submenu">
+          <a href="#" class="main-cat" data-id="5">Tratamiento</a>
+          <ul class="submenu">
+            <li><a href="#">Limpiadores</a></li>
+            <li><a href="#">Hidratantes</a></li>
+            <li><a href="#">Sérums</a></li>
+            <li><a href="#">Protección Solar</a></li>
+          </ul>
+        </li>
 
-            <div class="mini-box">
-              <strong>6 minis gratis*</strong>
-              <p>
-                por compras >99€ <br />
-                Código: BAG
-              </p>
-            </div>
+        <li class="has-submenu">
+          <a href="#" class="main-cat" data-id="4">Perfume</a>
+          <ul class="submenu">
+            <li><a href="#">Perfume Mujer</a></li>
+            <li><a href="#">Perfume Hombre</a></li>
+            <li><a href="#">Cofres</a></li>
+          </ul>
+        </li>
 
-            <button class="btn">Comprar</button>
+        <li class="has-submenu">
+          <a href="#" class="main-cat" data-id="2">Cabello</a>
+          <ul class="submenu">
+            <li><a href="#">Champús</a></li>
+            <li><a href="#">Acondicionadores</a></li>
+            <li><a href="#">Mascarillas</a></li>
+            <li><a href="#">Tratamientos</a></li>
+          </ul>
+        </li>
 
-            <p class="conditions">*Consultar condiciones aquí.</p>
-          </div>
-        </div>
-      </section>
+        <li class="has-submenu">
+          <a href="#" class="main-cat" data-id="1">Cuerpo</a>
+          <ul class="submenu">
+            <li><a href="#">Hidratación</a></li>
+            <li><a href="#">Exfoliantes</a></li>
+            <li><a href="#">Geles de ducha</a></li>
+          </ul>
+        </li>
 
-      <section class="product-grid" id="dynamic-grid"></section>
+        <li><a class="pink" href="#">Sephora Collection</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      <!-- PROMOS -->
-      <section class="promos">
-        <div class="promo-card">
-          <img src="./img/UNDERBANNER_NOVEDADESW9.avif" />
-
-          <div class="promo-text">
-            <h3>Novedades Korean Skincare</h3>
-            <p>Descubre las marcas Medicube, Biodance, Anua y muchas más.</p>
-            <button>Descubrir</button>
-          </div>
-        </div>
-
-        <div class="promo-card">
-          <img src="./img/UNDERBANNER_LANEIGEWATERBANK_AQUAFACIAL_SERUM.avif" />
-
-          <div class="promo-text">
-            <h3>Novedad LANEIGE</h3>
-            <p>Un sérum hidratante con AHA y BHA para un brillo glass skin.</p>
-            <button>Comprar</button>
-          </div>
-        </div>
-      </section>
-    </section>
-    <!-- NEWSLETTER -->
-
-    <section class="newsletter">
-      <div class="newsletter-container">
-        <div class="newsletter-text">
-          <h2>¡Recibe nuestras noticias y ofertas!</h2>
-
-          <p>
-            ¡Suscríbete a nuestra newsletter y disfruta de un 10% de descuento
-            en tu siguiente pedido!
-          </p>
-
-          <p class="small">
-            Al registrarme, acepto recibir ofertas y noticias y acepto la
-            política de privacidad.
-          </p>
-
-          <a href="#">(1) Ver condiciones de la oferta</a>
+  <!-- HERO -->
+  <section>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-products">
+          <img src="./img/SW_DESKTOP_KBEAUTYNEW.avif" />
         </div>
 
-        <div class="newsletter-form">
-          <label>Dirección de correo electrónico</label>
+        <div class="hero-card">
+          <h2>
+            Sephora Goodie bag <br />
+            ¡Solo en APP!
+          </h2>
 
-          <div class="input-group">
-            <input type="email" placeholder="nombre@ejemplo.com" />
-            <button id="subscribe">Suscribirse</button>
+          <div class="mini-box">
+            <strong>15% de Descuento</strong>
+            <p>
+              Oferta verano <br />
+              Código: BAG
+            </p>
           </div>
+
+          <button class="btn">Comprar</button>
+
+          <p class="conditions">*Consultar condiciones aquí.</p>
         </div>
       </div>
     </section>
 
-    <!-- BENEFICIOS -->
+    <section class="product-grid" id="dynamic-grid"></section>
 
-    <section class="benefits">
-      <div class="benefit">
-        <i class="fa-solid fa-truck"></i>
+    <!-- PROMOS -->
+    <section class="promos">
+      <div class="promo-card">
+        <img src="./img/UNDERBANNER_NOVEDADESW9.avif" />
 
-        <h4>Envío gratis</h4>
-        <p>Por compras superiores a 30€</p>
-
-        <a class="saberMas" href="#">Saber más</a>
+        <div class="promo-text">
+          <h3>Novedades Korean Skincare</h3>
+          <p>Descubre las marcas Medicube, Biodance, Anua y muchas más.</p>
+          <button>Descubrir</button>
+        </div>
       </div>
 
-      <div class="benefit">
-        <i class="fa-solid fa-box"></i>
+      <div class="promo-card">
+        <img src="./img/UNDERBANNER_LANEIGEWATERBANK_AQUAFACIAL_SERUM.avif" />
 
-        <h4>Devoluciones</h4>
-        <p>Gratis con 30 días para cambios y devoluciones</p>
-
-        <a class="saberMas" href="#">Saber más</a>
-      </div>
-
-      <div class="benefit">
-        <i class="fa-solid fa-bag-shopping"></i>
-
-        <h4>Click & Collect</h4>
-        <p>Recoge en 2h gratis*</p>
-
-        <a class="saberMas" href="#">Saber más</a>
-      </div>
-
-      <div class="benefit">
-        <i class="fa-solid fa-credit-card"></i>
-
-        <h4>Métodos de pago</h4>
-        <p>Pago seguro y en varias transacciones</p>
-
-        <a class="saberMas" href="#">Saber más</a>
+        <div class="promo-text">
+          <h3>Novedad LANEIGE</h3>
+          <p>Un sérum hidratante con AHA y BHA para un brillo glass skin.</p>
+          <button>Comprar</button>
+        </div>
       </div>
     </section>
-  </body>
+  </section>
+  <!-- NEWSLETTER -->
+
+  <section class="newsletter">
+    <div class="newsletter-container">
+      <div class="newsletter-text">
+        <h2>¡Recibe nuestras noticias y ofertas!</h2>
+
+        <p>
+          ¡Suscríbete a nuestra newsletter y disfruta de un 10% de descuento
+          en tu siguiente pedido!
+        </p>
+
+        <p class="small">
+          Al registrarme, acepto recibir ofertas y noticias y acepto la
+          política de privacidad.
+        </p>
+
+        <a href="#">(1) Ver condiciones de la oferta</a>
+      </div>
+
+      <div class="newsletter-form">
+        <label>Dirección de correo electrónico</label>
+
+        <div class="input-group">
+          <input type="email" placeholder="nombre@ejemplo.com" />
+          <button id="subscribe">Suscribirse</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS -->
+
+  <section class="benefits">
+    <div class="benefit">
+      <i class="fa-solid fa-truck"></i>
+
+      <h4>Envío gratis</h4>
+      <p>Por compras superiores a 30€</p>
+
+      <a class="saberMas" href="#">Saber más</a>
+    </div>
+
+    <div class="benefit">
+      <i class="fa-solid fa-box"></i>
+
+      <h4>Devoluciones</h4>
+      <p>Gratis con 30 días para cambios y devoluciones</p>
+
+      <a class="saberMas" href="#">Saber más</a>
+    </div>
+
+    <div class="benefit">
+      <i class="fa-solid fa-bag-shopping"></i>
+
+      <h4>Click & Collect</h4>
+      <p>Recoge en 2h gratis*</p>
+
+      <a class="saberMas" href="#">Saber más</a>
+    </div>
+
+    <div class="benefit">
+      <i class="fa-solid fa-credit-card"></i>
+
+      <h4>Métodos de pago</h4>
+      <p>Pago seguro y en varias transacciones</p>
+
+      <a class="saberMas" href="#">Saber más</a>
+    </div>
+  </section>
+</body>
+
 </html>

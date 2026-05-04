@@ -1,5 +1,5 @@
 export const API = {
-  baseUrl: "http://localhost:8000/api",
+  baseUrl: "http://127.0.0.1:8000/api",
 
   async getAllProducts() {
     try {
@@ -30,6 +30,7 @@ export const API = {
           precio: parseFloat(p.precio),
           img: p.img || "default.jpg",
           categoria: categoriaName,
+          categoria_id: p.categoria_id,
           label: p.categoria ? p.categoria.nombre : categoriaName,
           descripcion: p.nombre,
         };
@@ -40,6 +41,17 @@ export const API = {
     }
   },
 
+  async checkEmail(email) {
+    try {
+      const response = await fetch(`${this.baseUrl}/check-email?email=${email}`);
+      const result = await response.json();
+      return result; // { exists: true/false }
+    } catch (error) {
+      console.error(error);
+      return { exists: false, error: "Error al verificar email: " + error.message };
+    }
+  },
+
   async login(email, password) {
     try {
       const response = await fetch(`${this.baseUrl}/login`, {
@@ -47,11 +59,12 @@ export const API = {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
       });
-      if (!response.ok) throw new Error("Login fallido");
-      return await response.json();
+      const result = await response.json();
+      if (!response.ok) return { error: result.error || "Credenciales inválidas" };
+      return result;
     } catch (error) {
       console.error(error);
-      return null;
+      return { error: "Error de conexión: " + error.message };
     }
   },
 
@@ -62,11 +75,21 @@ export const API = {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
-      if (!response.ok) throw new Error("Registro fallido");
-      return await response.json();
+
+      const contentType = response.headers.get("content-type");
+      let result;
+      if (contentType && contentType.includes("application/json")) {
+        result = await response.json();
+      } else {
+        const text = await response.text();
+        return { error: `Error del servidor (no JSON): ${response.status} ${text.substring(0, 100)}` };
+      }
+
+      if (!response.ok) return { error: result.error || "Error desconocido en el servidor" };
+      return result;
     } catch (error) {
       console.error(error);
-      return null;
+      return { error: "No se pudo conectar con el servidor: " + error.message };
     }
   },
 

@@ -19,6 +19,7 @@ use App\Http\Controllers\DetalleController;
 */
 
 Route::post('/login', [ClienteController::class, 'login']);
+Route::get('/check-email', [ClienteController::class, 'checkEmail']);
 
 Route::apiResource('categorias', CategoriaController::class);
 Route::apiResource('productos', ProductoController::class);

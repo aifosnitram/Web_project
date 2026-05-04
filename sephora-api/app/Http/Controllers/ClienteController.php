@@ -15,17 +15,34 @@ class ClienteController extends Controller
     public function store(Request $request) {
         DB::beginTransaction();
         try {
-            $persona = Persona::create($request->only(['nombre', 'apellido', 'telf', 'direccion']));
+            $personaData = $request->only(['nombre', 'apellido', 'telf', 'direccion']);
+            $personaData['nombre'] = $personaData['nombre'] ?? 'Nuevo';
+            $personaData['apellido'] = $personaData['apellido'] ?? 'Usuario';
+            $personaData['telf'] = $personaData['telf'] ?? '000000000';
+            $personaData['direccion'] = $personaData['direccion'] ?? 'Pendiente';
+
+            $persona = Persona::create($personaData);
+            
+            if (!$persona || !$persona->id) {
+                throw new \Exception("No se pudo crear la Persona");
+            }
+
             $cliente = Cliente::create([
                 'id' => $persona->id,
                 'email' => $request->email,
                 'password' => Hash::make($request->password)
             ]);
+
+            if (!$cliente) {
+                throw new \Exception("No se pudo crear el Cliente");
+            }
+
             DB::commit();
             return response()->json($cliente->load('persona'), 201);
         } catch (\Exception $e) {
             DB::rollBack();
-            return response()->json(['error' => $e->getMessage()], 400);
+            \Log::error("Error registrando cliente: " . $e->getMessage());
+            return response()->json(['error' => 'Error al registrar: ' . $e->getMessage()], 400);
         }
     }
     public function update(Request $request, $id) {
@@ -62,5 +79,10 @@ class ClienteController extends Controller
             return response()->json($cliente->load('persona'), 200);
         }
         return response()->json(['error' => 'Credenciales inválidas'], 401);
+    }
+
+    public function checkEmail(Request $request) {
+        $exists = Cliente::where('email', $request->query('email'))->exists();
+        return response()->json(['exists' => $exists], 200);
     }
 }

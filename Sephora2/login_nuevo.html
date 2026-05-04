@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <link rel="stylesheet" href="sephora-style.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-header">
+        <a href="index.html" style="text-decoration: none; color: inherit">
+          <h1>SEPHORA</h1>
+        </a>
+      </div>
+
+      <div class="login-box">
+        <h2>Iniciar sesión o crear cuenta</h2>
+        <div class="input-group">
+          <label>Correo electrónico</label>
+          <input
+            type="email"
+            id="login-email"
+            placeholder="Introduce tu email"
+          />
+        </div>
+        <div class="input-group">
+          <label>Contraseña</label>
+          <input
+            type="password"
+            id="login-password"
+            placeholder="Introduce tu contraseña"
+          />
+        </div>
+        <button class="btn-black" id="btn-final-login">Conectarse</button>
+        <p style="font-size: 12px; margin-top: 20px; color: #666; text-align: center;">
+          Si no tienes cuenta, se creará una automáticamente al conectarte.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

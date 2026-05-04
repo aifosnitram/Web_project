@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <link rel="stylesheet" href="sephora-style.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <div class="cesta-header">
+      <a href="index.html" style="text-decoration: none; color: inherit">
+        <h1>SEPHORA</h1>
+      </a>
+    </div>
+    <div class="cesta-layout">
+      <div class="cesta-items">
+        <h2>Cesta</h2>
+        <div id="lista-productos-cesta">
+          <!-- Los productos se cargan aquí desde JS -->
+        </div>
+      </div>
+
+      <aside class="cesta-summary">
+        <h3>Resumen del pedido</h3>
+        <p>Subtotal: <span id="subtotal">0.00</span> €</p>
+ 
+        <div class="promo-container">
+          <input type="text" id="promo-code" placeholder="Código promocional" />
+          <button class="btn-promo" onclick="aplicarPromocion()">Aplicar</button>
+        </div>
+
+        <div class="shipping-bar-container">
+          <div class="bar-bg">
+            <div id="shipping-fill" class="bar-fill"></div>
+          </div>
+          <p id="shipping-msg" class="free-shipping-msg">
+            Faltan XX € para el envío GRATIS
+          </p>
+        </div>
+
+        <button class="btn-confirmar">CONFIRMAR</button>
+      </aside>
+    </div>
+  </body>
+</html>
