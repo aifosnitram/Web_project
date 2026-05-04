@@ -13,7 +13,7 @@ export const UI = {
       const isFav = favorites.includes(p.id);
       container.innerHTML += `
         <div class="product" data-id="${p.id}">
-          <span class="badge">${p.categoria || "Novedad"}</span>
+          <span class="badge">${p.label || p.categoria || "Novedad"}</span>
           <i class="fa fa-heart heart${isFav ? " active" : ""}"></i>
           <img src="./img/${p.categoria}/${p.img}" alt="${p.tipo}" />
           <p class="product-name">${p.tipo}</p>
