@@ -2,56 +2,85 @@
 Proyecto LLM 1º DAW clon de una pagina web
 web a copiar: [sephora](https://www.sephora.com/)
 
-## Deadlines:
+# Clon Web de Sephora
+## Descripción del proyecto
+Este proyecto consiste en recrear una versión propia de la página web de Sephora. El objetivo principal es aprender las bases necesarias para desarrollar una aplicación web completa con múltiples funcionalidades, aplicables tanto a futuros proyectos como al entorno profesional.
 
-- Semana del 16 de feb entrega del prototipo HTML
+La web de Sephora destaca por ofrecer una experiencia de usuario clara, sencilla y atractiva, facilitando la navegación sin sobrecargar al usuario con demasiada información.
 
-## Organisation:
+## Análisis de requerimientos
+### Ususarios
+La aplicación cuenta con tres tipos de usuarios:
+- Visitante: puede navegar y visualizar productos
+- Usuario registrado: puede gestionar su cuenta, favoritos y cesta
+- Administrador: gestiona el contenido de la web
 
-### 1. The Project Manager & Layout Lead (The "Skeleton" Architect)
+### Arquitectura
+#### Front Office
+- Visualización de productos
+- Búsqueda y filtrado
+- Paginación
+- Registro y login con validación
+#### Back Office
+- Panel de administración
+- Gestión de productos (CRUD)
+- Conexión con API y base de datos
 
-This person is responsible for the overall structure and the elements that appear on every page.
+## Esquema de contenidos (Wireframes)
+Se han diseñado wireframes para definir la estructura de las principales páginas:
+- Home
+- Listado de productos
+- Detalle de producto
+- Login / Registro
+- Panel de administración
 
-    The Navbar & Footer: These are complex on Sephora (mega-menus, search bars, account icons). They must look the same across all pages.
+## Tecnologías utilizadas
+### Frontend
+HTML5 → estructura de la web
+CSS3 → diseño y estilos
+JavaScript → lógica y dinamismo
+Bootstrap → diseño responsive
 
-    Responsive Design: Ensuring the site works on mobile (Sephora’s mobile view is very different from desktop).
+### Backend
+Node.js → ejecución de JavaScript en servidor
+Express → creación de API REST
+MySQL → almacenamiento de datos
 
-    Project Organization: Setting up the shared CSS variables (colors, fonts like 'Montserrat') so everyone’s work looks consistent.
+## Persistencia de datos
+La aplicación utiliza una base de datos MySQL para almacenar información como:
+- Usuarios
+- Productos
+- Datos relacionados con la aplicación
 
-    Task: Create a base.css and a template that others can use.
+## Desarrollo del proyecto
+### Configuración del entorno
+Se instaló Node.js y las dependencias necesarias como Express. También se configuró la conexión con MySQL y la estructura del proyecto.
 
-### 2. The Homepage & Visuals Specialist (The "Landing" Expert)
+### Modelos, controladores y rutas
+Se definieron los modelos de datos y se implementaron controladores y rutas para gestionar la lógica y las operaciones CRUD mediante una API REST.
 
-The Sephora homepage is heavy on carousels, banners, and marketing grids.
+### Vistas y funcionalidades
+Se desarrollaron las vistas principales (home, productos, detalle, login, admin) implementando:
+- Navegación
+- Validación de formularios
+- LocalStorage
+- Peticiones a la API con fetch
 
-    Banners & Carousels: Building the sliding image banners (hero section) and the "New Arrivals" scrollable lists.
+# Conclusión
+Este proyecto ha permitido desarrollar una aplicación web completa basada en un clon de Sephora, aplicando los conocimientos del módulo.
 
-    Grid Layouts: Using CSS Grid or Flexbox to replicate the "Shop by Category" sections.
+Se han cumplido objetivos como:
+- Creación de una API REST
+- Uso de JSON
+- Conexión con base de datos
+- Implementación de funcionalidades como búsqueda, filtrado y LocalStorage
 
-    Hover Effects: Adding the smooth transitions when a user hovers over a brand or category.
-
-    Task: Build the index.html and ensure the high-end "luxury" feel of the brand is captured.
-
-### 3. The Product Catalog Manager (The "Data" Expert)
-
-This person handles how products are displayed and filtered.
-
-    Product Cards: Creating a reusable "card" component (image, price, star rating, "Add to Basket" button).
-
-    Category Pages: Building the layout where 20+ products are shown at once.
-
-    Search/Filters: Using basic JavaScript to "filter" products (e.g., show only "Skincare" or "Makeup").
-
-    Task: Create a small JSON file or array of product data and use JS to inject it into the page.
-
-### 4. The Interactive & Cart Specialist (The "Logic" Expert)
-
-This person handles the "E-commerce" functionality using JavaScript.
-
-    Product Detail Page: Creating the page that opens when you click a product (zoom on image, shade selector).
-
-    The Shopping Basket: Creating the logic to "Add to Cart" and show the total price.
-
-    Local Storage: Using localStorage so that even if the student refreshes the page, the items stay in the cart.
-
-    Task: Manage the "State" of the application—knowing what the user has selected.
+## Aprendizaje y mejoras futuras
+### Aprendizaje
+Mejor comprensión de aplicaciones full-stack
+Uso de APIs REST
+Organización del código
+### Mejoras futuras
+Sistema de pagos
+Autenticación con JWT
+Recomendaciones de productos
