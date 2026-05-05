@@ -73,16 +73,37 @@ class ClienteController extends Controller
     }
     
     // Auth login endpoint
-    public function login(Request $request) {
-        $cliente = Cliente::where('email', $request->email)->first();
-        if ($cliente && Hash::check($request->password, $cliente->password)) {
-            return response()->json($cliente->load('persona'), 200);
-        }
-        return response()->json(['error' => 'Credenciales inválidas'], 401);
-    }
-
     public function checkEmail(Request $request) {
         $exists = Cliente::where('email', $request->query('email'))->exists();
         return response()->json(['exists' => $exists], 200);
+    }
+
+    public function indexAll() {
+        $clientes = Cliente::with('persona')->get();
+        $formatted = $clientes->map(function($c) {
+            return [
+                'id' => $c->id,
+                'name' => $c->persona ? $c->persona->nombre : 'Sin nombre',
+                'email' => $c->email,
+                'role' => $c->role ?? 'user'
+            ];
+        });
+        return response()->json($formatted, 200);
+    }
+
+    public function updateRole(Request $request, $id) {
+        $cliente = Cliente::findOrFail($id);
+        $cliente->update(['role' => $request->role]);
+        return response()->json(['message' => 'Rol actualizado'], 200);
+    }
+
+    public function login(Request $request) {
+        $cliente = Cliente::where('email', $request->email)->first();
+        if ($cliente && Hash::check($request->password, $cliente->password)) {
+            $data = $cliente->load('persona')->toArray();
+            $data['role'] = $cliente->role; // Asegurar que el rol se envía
+            return response()->json($data, 200);
+        }
+        return response()->json(['error' => 'Credenciales inválidas'], 401);
     }
 }

@@ -79,6 +79,19 @@ const init = async () => {
     cargarCesta();
   }
 
+  if (window.location.href.includes("login_nuevo.html")) {
+    const user = Storage.get("user");
+    const formBox = document.getElementById("login-form-box");
+    const loggedBox = document.getElementById("logged-in-box");
+    const nameTag = document.getElementById("logged-in-name");
+
+    if (user && formBox && loggedBox) {
+      formBox.style.display = "none";
+      loggedBox.style.display = "block";
+      if (nameTag) nameTag.innerText = `Hola, ${user}`;
+    }
+  }
+
   // Listeners para el grid dinámico
   if (gridTag) {
     gridTag.addEventListener("click", (e) => {
@@ -186,6 +199,7 @@ const init = async () => {
           const nombreUsuario = result.persona && result.persona.nombre ? result.persona.nombre : email;
           Storage.set("user", nombreUsuario);
           Storage.set("user_id", result.id);
+          Storage.set("role", result.role || "user");
           alert("¡Bienvenido de nuevo!");
           window.location.href = "index.html";
         } else {
@@ -204,6 +218,7 @@ const init = async () => {
         if (result && !result.error) {
           Storage.set("user", "Nuevo Usuario");
           Storage.set("user_id", result.id);
+          Storage.set("role", result.role || "user");
           alert("¡Cuenta creada y sesión iniciada!");
           window.location.href = "index.html";
         } else {
@@ -291,8 +306,9 @@ window.toggleLogin = (e) => {
 window.logout = () => {
   Storage.remove("user");
   Storage.remove("user_id");
-  const userText = document.getElementById("user-text");
-  if (userText) userText.innerText = "No logueado";
+  Storage.remove("role");
+  alert("Sesión cerrada");
+  window.location.reload();
 };
 
 // --- Carrito ---

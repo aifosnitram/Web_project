@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h2>🛠 ADMIN</h2>
+
+            <button onclick="loadUsers()">Usuarios</button>
+            <button onclick="loadProducts()">Productos</button>
+            <button onclick="logout()">Salir</button>
+        </aside>
+
+        <!-- CONTENT -->
+        <main class="content">
+            <h1>Panel de Administración</h1>
+
+            <div id="table"></div>
+        </main>
+
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>

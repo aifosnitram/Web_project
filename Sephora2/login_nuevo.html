@@ -12,7 +12,7 @@
         </a>
       </div>
 
-      <div class="login-box">
+      <div class="login-box" id="login-form-box">
         <h2>Iniciar sesión o crear cuenta</h2>
         <div class="input-group">
           <label>Correo electrónico</label>
@@ -34,6 +34,17 @@
         <p style="font-size: 12px; margin-top: 20px; color: #666; text-align: center;">
           Si no tienes cuenta, se creará una automáticamente al conectarte.
         </p>
+      </div>
+
+      <!-- ESTADO LOGUEADO -->
+      <div class="login-box" id="logged-in-box" style="display: none; text-align: center;">
+        <div style="font-size: 50px; margin-bottom: 20px;">👤</div>
+        <h2 id="logged-in-name">Bienvenido</h2>
+        <p id="logged-in-email" style="color: #666; margin-bottom: 30px;"></p>
+        
+        <button class="btn-black" onclick="logout()" style="background: white; color: black; border: 1px solid black;">Cerrar sesión</button>
+        <br><br>
+        <a href="index.html" style="color: black; font-weight: bold; text-decoration: underline;">Volver a la tienda</a>
       </div>
     </div>
   </body>

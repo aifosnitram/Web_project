@@ -11,7 +11,7 @@ class Cliente extends Model
 
     public $incrementing = false; // Primary key is not auto-incrementing
 
-    protected $fillable = ['id', 'email', 'password'];
+    protected $fillable = ['id', 'email', 'password', 'role'];
 
     protected $hidden = ['password'];
 
