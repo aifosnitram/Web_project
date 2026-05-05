@@ -77,10 +77,11 @@ Se han cumplido objetivos como:
 
 ## Aprendizaje y mejoras futuras
 ### Aprendizaje
-Mejor comprensión de aplicaciones full-stack
-Uso de APIs REST
-Organización del código
+- Mejor comprensión de aplicaciones full-stack
+- Uso de APIs REST
+- Organización del código
+
 ### Mejoras futuras
-Sistema de pagos
-Autenticación con JWT
-Recomendaciones de productos
+- Sistema de pagos
+- Autenticación con JWT
+- Recomendaciones de productos
