@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3307
--- Tiempo de generación: 01-05-2026 a las 14:59:31
+-- Tiempo de generación: 05-05-2026 a las 17:32:49
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -59,14 +59,6 @@ CREATE TABLE `carritos` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Volcado de datos para la tabla `carritos`
---
-
-INSERT INTO `carritos` (`id`, `fecha`, `cliente_id`, `created_at`, `updated_at`) VALUES
-(1, '2026-05-01', 1, '2026-05-01 10:43:29', '2026-05-01 10:43:29'),
-(2, '2026-05-01', 1, '2026-05-01 10:43:32', '2026-05-01 10:43:32');
-
 -- --------------------------------------------------------
 
 --
@@ -81,16 +73,6 @@ CREATE TABLE `carrito_producto` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Volcado de datos para la tabla `carrito_producto`
---
-
-INSERT INTO `carrito_producto` (`carrito_id`, `producto_id`, `cantidad`, `pxq`, `created_at`, `updated_at`) VALUES
-(1, 3, 1, 199.86, '2026-05-01 10:43:31', '2026-05-01 10:43:31'),
-(1, 4, 1, 116.64, '2026-05-01 10:43:33', '2026-05-01 10:43:33'),
-(2, 3, 1, 199.86, '2026-05-01 10:43:34', '2026-05-01 10:43:34'),
-(2, 4, 1, 116.64, '2026-05-01 10:43:55', '2026-05-01 10:43:55');
 
 -- --------------------------------------------------------
 
@@ -110,11 +92,11 @@ CREATE TABLE `categorias` (
 --
 
 INSERT INTO `categorias` (`id`, `nombre`, `created_at`, `updated_at`) VALUES
-(1, 'perfumes', '2026-05-01 10:30:47', '2026-05-01 10:30:47'),
-(2, 'skincare', '2026-05-01 10:30:47', '2026-05-01 10:30:47'),
-(3, 'makeup', '2026-05-01 10:30:47', '2026-05-01 10:30:47'),
-(4, 'cabello', '2026-05-01 10:30:47', '2026-05-01 10:30:47'),
-(5, 'cuerpo', '2026-05-01 10:30:47', '2026-05-01 10:30:47');
+(1, 'cepillos', '2026-05-01 13:03:30', '2026-05-01 13:03:30'),
+(2, 'champus', '2026-05-01 13:03:30', '2026-05-01 13:03:30'),
+(3, 'makeup', '2026-05-01 13:03:30', '2026-05-01 13:03:30'),
+(4, 'perfume', '2026-05-01 13:03:30', '2026-05-01 13:03:30'),
+(5, 'skincare', '2026-05-01 13:03:30', '2026-05-01 13:03:30');
 
 -- --------------------------------------------------------
 
@@ -135,7 +117,7 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`id`, `email`, `password`, `created_at`, `updated_at`) VALUES
-(1, 'anna@gmail.com', '$2y$12$nyXsW/Y1u7t1mPlZ/MQfM.nMOeZ68GcBTx8iY8zJKpmTRNClo/vfq', '2026-05-01 10:43:08', '2026-05-01 10:43:08');
+(1, 'anna@gmail.com', '$2y$12$l.mLjeXNThBeCyPbki0xv.2gaB63d7BZl.ff09TZeTneRUYkZMT9C', '2026-05-04 12:26:17', '2026-05-04 12:26:17');
 
 -- --------------------------------------------------------
 
@@ -152,16 +134,6 @@ CREATE TABLE `detalles` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Volcado de datos para la tabla `detalles`
---
-
-INSERT INTO `detalles` (`id`, `pedido_id`, `producto_id`, `cantidad`, `precio_unit`, `created_at`, `updated_at`) VALUES
-(1, 1, 3, 1, 199.86, '2026-05-01 10:43:25', '2026-05-01 10:43:25'),
-(2, 1, 4, 1, 116.64, '2026-05-01 10:43:27', '2026-05-01 10:43:27'),
-(3, 2, 3, 1, 199.86, '2026-05-01 10:43:28', '2026-05-01 10:43:28'),
-(4, 2, 4, 1, 116.64, '2026-05-01 10:43:30', '2026-05-01 10:43:30');
 
 -- --------------------------------------------------------
 
@@ -289,14 +261,6 @@ CREATE TABLE `pedidos` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Volcado de datos para la tabla `pedidos`
---
-
-INSERT INTO `pedidos` (`id`, `fecha`, `total`, `fecha_mora`, `fecha_envio`, `fecha_entrega`, `cliente_id`, `empleado_id`, `transportista_id`, `created_at`, `updated_at`) VALUES
-(1, '2026-05-01', 316.50, NULL, NULL, NULL, 1, NULL, NULL, '2026-05-01 10:43:23', '2026-05-01 10:43:23'),
-(2, '2026-05-01', 316.50, NULL, NULL, NULL, 1, NULL, NULL, '2026-05-01 10:43:26', '2026-05-01 10:43:26');
-
 -- --------------------------------------------------------
 
 --
@@ -318,7 +282,7 @@ CREATE TABLE `personas` (
 --
 
 INSERT INTO `personas` (`id`, `nombre`, `apellido`, `telf`, `direccion`, `created_at`, `updated_at`) VALUES
-(1, 'anna', 'la', '123345678', 'ghgh', '2026-05-01 10:43:08', '2026-05-01 10:43:08');
+(1, 'anna', 'anna', '697259804', 'asfdkas', '2026-05-04 12:26:16', '2026-05-04 12:26:16');
 
 -- --------------------------------------------------------
 
@@ -340,59 +304,57 @@ CREATE TABLE `productos` (
 -- Volcado de datos para la tabla `productos`
 --
 
-INSERT INTO productos (id, nombre, precio, img, categoria_id, created_at, updated_at) VALUES
-(1, 'FENTY BEAUTY - Fine Linez', 25.00, 'cepillo1.webp', 1, NOW(), NOW()),
-(2, 'Tangle Teezer - Desenredante', 20.00, 'cepillo2.avif', 1, NOW(), NOW()),
-(3, 'Denman - Definidor de Rizos', 18.00, 'cepillo3.jpg', 1, NOW(), NOW()),
-(4, 'GHD - Cepillo volumen', 25.50, 'cepillo4.avif', 1, NOW(), NOW()),
-(5, 'AVEDA - Cepillo de madera', 35.00, 'cepillo5.avif', 1, NOW(), NOW()),
-(6, 'GHD - Cepillo secador', 419.00, 'cepillo6.avif', 1, NOW(), NOW()),
-(7, 'FENTY HAIR - 3 en 1', 16.50, 'cepillo7.avif', 1, NOW(), NOW()),
-(8, 'HAIR RITUEL BY SISLEY - Redondo', 80.00, 'cepillo8.webp', 1, NOW(), NOW()),
-(9, 'SEPHORA COLLECTION - Cepillo de aire', 69.00, 'cepillo9.avif', 1, NOW(), NOW()),
-(10, 'TANGLE TEEZER - Compacto', 16.50, 'cepillo10.avif', 1, NOW(), NOW()),
-(11, 'FENTY HAIR - Estuche', 55.00, 'champu1.avif', 2, NOW(), NOW()),
-(12, 'OUAI - Detox', 14.80, 'champu2.avif', 2, NOW(), NOW()),
-(13, 'KÉRASTASE - Bain Nutri', 34.20, 'champu3.avif', 2, NOW(), NOW()),
-(14, 'GOA ORGANICS - Graso', 25.00, 'champu4.avif', 2, NOW(), NOW()),
-(15, 'GOA ORGANICS - Grueso', 34.70, 'champu4.webp', 2, NOW(), NOW()),
-(16, 'SOL DE JANEIRO - Reparador + Fortalecedor', 14.50, 'champu6.avif', 2, NOW(), NOW()),
-(17, 'FENTY HAIR - Reparador Hidratante', 16.00, 'champu7.avif', 2, NOW(), NOW()),
-(18, 'OUAI - Cabello y Cuerpo', 43.90, 'champu8.avif', 2, NOW(), NOW()),
-(19, 'OUAI - Cabello Fino', 35.20, 'champu9.avif', 2, NOW(), NOW()),
-(20, 'CHAMPO - Voluminizante', 12.00, 'champu10.webp', 2, NOW(), NOW()),
-(21, 'BENEFIT COSMETICS - Colorete Líquido', 32.50, 'makeup1.avif', 3, NOW(), NOW()),
-(22, 'GUERLAIN - Polvos Iluminadores', 60.00, 'makeup2.avif', 3, NOW(), NOW()),
-(23, 'GUERLAIN - Tratamiento Con Color Protector', 52.00, 'makeup3.avif', 3, NOW(), NOW()),
-(24, 'SEPHORA COLLECTION - Estrás Individuales', 8.50, 'makeup4.avif', 3, NOW(), NOW()),
-(25, 'CLINIQUE - Bronceador', 30.00, 'makeup5.avif', 3, NOW(), NOW()),
-(26, 'GUERLAIN - Barra De Labios', 49.90, 'makeup6.avif', 3, NOW(), NOW()),
-(27, 'ARMANI - Fondo De Maquillaje', 60.00, 'makeup7.avif', 3, NOW(), NOW()),
-(28, 'REM BEAUTY - Colorete Iluminador', 38.00, 'makeup8.avif', 3, NOW(), NOW()),
-(29, 'GIVENCHY - Corrección De Rojeces', 54.00, 'makeup9.webp', 3, NOW(), NOW()),
-(30, 'PRADA - Corrector', 38.50, 'makeup10.avif', 3, NOW(), NOW()),
-(31, 'CHANEL - N5 (Mujer)', 150.00, 'perfume1.avif', 4, NOW(), NOW()),
-(32, 'CHANEL - Splendide', 80.00, 'perfume2.avif', 4, NOW(), NOW()),
-(33, 'GIORGIO ARMANI - Acqua Di Gio (Hombre)', 85.50, 'perfume3.webp', 4, NOW(), NOW()),
-(34, 'CAROLINA HERRERA - Good Girl (Mujer)', 110.00, 'perfume4.avif', 4, NOW(), NOW()),
-(35, 'PACO RABANNE - 1 Million (Hombre)', 78.00, 'perfume5.avif', 4, NOW(), NOW()),
-(36, 'YVES SAINT LAURENT - Libre (Mujer)', 105.00, 'perfume6.avif', 4, NOW(), NOW()),
-(37, 'HUGO BOSS - Boss Bottled (Hombre)', 72.00, 'perfume7.webp', 4, NOW(), NOW()),
-(38, 'LANCÔME - La Vie Est Belle (Mujer)', 98.00, 'perfume8.avif', 4, NOW(), NOW()),
-(39, 'VERSACE - Eros (Hombre)', 82.00, 'perfume9.avif', 4, NOW(), NOW()),
-(40, 'MARC JACOBS - Perfect', 88.00, 'perfume10.webp', 4, NOW(), NOW()),
-(41, 'ANUA - Limpiador Purificante', 14.50, 'skincare1.avif', 5, NOW(), NOW()),
-(42, 'ANUA - Tónico Iluminador', 17.80, 'skincare2.avif', 5, NOW(), NOW()),
-(43, 'CAUDALIE - Set Serum & Gelatina', 29.50, 'skincare3.avif', 5, NOW(), NOW()),
-(44, 'AESTURA - Limpiador En Espuma', 16.00, 'skincare4.avif', 5, NOW(), NOW()),
-(45, 'BYOMA - Gel Limpiador', 12.00, 'skincare5.avif', 5, NOW(), NOW()),
-(46, 'BIODANCE - Mascarilla Iluminadora', 25.50, 'skincare6.avif', 5, NOW(), NOW()),
-(47, 'BIODANCE - Mascarilla Calmante', 24.00, 'skincare7.avif', 5, NOW(), NOW()),
-(48, 'NUXE - Desmaquillante Ojos Y Labios', 28.50, 'skincare8.avif', 5, NOW(), NOW()),
-(49, 'DIOR - Loción De Rostro', 42.00, 'skincare9.avif', 5, NOW(), NOW()),
-(50, 'SISLEY - Limpiador Facial', 94.00, 'skincare10.avif', 5, NOW(), NOW());
-
-
+INSERT INTO `productos` (`id`, `nombre`, `precio`, `img`, `categoria_id`, `created_at`, `updated_at`) VALUES
+(1, 'FENTY BEAUTY - Fine Linez', 25.00, 'cepillo1.webp', 1, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(2, 'Tangle Teezer - Desenredante', 20.00, 'cepillo2.avif', 1, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(3, 'Denman - Definidor de Rizos', 18.00, 'cepillo3.jpg', 1, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(4, 'GHD - Cepillo volumen', 25.50, 'cepillo4.avif', 1, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(5, 'AVEDA - Cepillo de madera', 35.00, 'cepillo5.avif', 1, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(6, 'GHD - Cepillo secador', 419.00, 'cepillo6.avif', 1, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(7, 'FENTY HAIR - 3 en 1', 16.50, 'cepillo7.avif', 1, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(8, 'HAIR RITUEL BY SISLEY - Redondo', 80.00, 'cepillo8.webp', 1, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(9, 'SEPHORA COLLECTION - Cepillo de aire', 69.00, 'cepillo9.avif', 1, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(10, 'TANGLE TEEZER - Compacto', 16.50, 'cepillo10.avif', 1, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(11, 'FENTY HAIR - Estuche', 55.00, 'champu1.avif', 2, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(12, 'OUAI - Detox', 14.80, 'champu2.avif', 2, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(13, 'KÉRASTASE - Bain Nutri', 34.20, 'champu3.avif', 2, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(14, 'GOA ORGANICS - Graso', 25.00, 'champu4.avif', 2, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(15, 'GOA ORGANICS - Grueso', 34.70, 'champu5.webp', 2, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(16, 'SOL DE JANEIRO - Reparador + Fortalecedor', 14.50, 'champu6.avif', 2, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(17, 'FENTY HAIR - Reparador Hidratante', 16.00, 'champu7.avif', 2, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(18, 'OUAI - Cabello y Cuerpo', 43.90, 'champu8.avif', 2, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(19, 'OUAI - Cabello Fino', 35.20, 'champu9.avif', 2, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(20, 'CHAMPO - Voluminizante', 12.00, 'champu10.webp', 2, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(21, 'BENEFIT COSMETICS - Colorete Líquido', 32.50, 'makeup1.avif', 3, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(22, 'GUERLAIN - Polvos Iluminadores', 60.00, 'makeup2.avif', 3, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(23, 'GUERLAIN - Tratamiento Con Color Protector', 52.00, 'makeup3.avif', 3, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(24, 'SEPHORA COLLECTION - Estrás Individuales', 8.50, 'makeup4.avif', 3, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(25, 'CLINIQUE - Bronceador', 30.00, 'makeup5.avif', 3, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(26, 'GUERLAIN - Barra De Labios', 49.90, 'makeup6.avif', 3, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(27, 'ARMANI - Fondo De Maquillaje', 60.00, 'makeup7.avif', 3, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(28, 'REM BEAUTY - Colorete Iluminador', 38.00, 'makeup8.avif', 3, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(29, 'GIVENCHY - Corrección De Rojeces', 54.00, 'makeup9.webp', 3, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(30, 'PRADA - Corrector', 38.50, 'makeup10.avif', 3, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(31, 'CHANEL - N5 (Mujer)', 150.00, 'perfume1.avif', 4, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(32, 'CHANEL - Splendide', 80.00, 'perfume2.avif', 4, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(33, 'GIORGIO ARMANI - Acqua Di Gio (Hombre)', 85.50, 'perfume3.webp', 4, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(34, 'CAROLINA HERRERA - Good Girl (Mujer)', 110.00, 'perfume4.avif', 4, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(35, 'PACO RABANNE - 1 Million (Hombre)', 78.00, 'perfume5.avif', 4, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(36, 'YVES SAINT LAURENT - Libre (Mujer)', 105.00, 'perfume6.avif', 4, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(37, 'HUGO BOSS - Boss Bottled (Hombre)', 72.00, 'perfume7.webp', 4, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(38, 'LANCÔME - La Vie Est Belle (Mujer)', 98.00, 'perfume8.avif', 4, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(39, 'VERSACE - Eros (Hombre)', 82.00, 'perfume9.avif', 4, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(40, 'MARC JACOBS - Perfect', 88.00, 'perfume10.webp', 4, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(41, 'ANUA - Limpiador Purificante', 14.50, 'skincare1.avif', 5, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(42, 'ANUA - Tónico Iluminador', 17.80, 'skincare2.avif', 5, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(43, 'CAUDALIE - Set Serum & Gelatina', 29.50, 'skincare3.avif', 5, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(44, 'AESTURA - Limpiador En Espuma', 16.00, 'skincare4.avif', 5, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(45, 'BYOMA - Gel Limpiador', 12.00, 'skincare5.avif', 5, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(46, 'BIODANCE - Mascarilla Iluminadora', 25.50, 'skincare6.avif', 5, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(47, 'BIODANCE - Mascarilla Calmante', 24.00, 'skincare7.avif', 5, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(48, 'NUXE - Desmaquillante Ojos Y Labios', 28.50, 'skincare8.avif', 5, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(49, 'DIOR - Loción De Rostro', 42.00, 'skincare9.avif', 5, '2026-05-04 16:03:37', '2026-05-04 16:03:37'),
+(50, 'SISLEY - Limpiador Facial', 94.00, 'skincare10.avif', 5, '2026-05-04 16:03:37', '2026-05-04 16:03:37');
 
 -- --------------------------------------------------------
 
@@ -581,7 +543,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `carritos`
 --
 ALTER TABLE `carritos`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `categorias`
@@ -593,7 +555,7 @@ ALTER TABLE `categorias`
 -- AUTO_INCREMENT de la tabla `detalles`
 --
 ALTER TABLE `detalles`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `failed_jobs`
@@ -617,7 +579,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de la tabla `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `personas`

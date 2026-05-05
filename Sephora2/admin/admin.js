@@ -2,20 +2,25 @@ const API = "http://127.0.0.1:8000/api";
 
 /* 🔐 PROTECCIÓN SIMPLE */
 const savedRole = localStorage.getItem("role");
-const role = savedRole ? savedRole.replace(/['"]+/g, '') : ""; // Limpiar comillas de JSON.stringify
+let role = "";
+try {
+  role = JSON.parse(savedRole) || "";
+} catch {
+  role = savedRole || "";
+}
 
 if (role !== "admin") {
-    window.location.href = "../index.html";
+  window.location.href = "../index.html";
 }
 
 /* =========================
    👤 USUARIOS
 ========================= */
 async function loadUsers() {
-    const res = await fetch(`${API}/usuarios`);
-    const users = await res.json();
+  const res = await fetch(`${API}/usuarios`);
+  const users = await res.json();
 
-    let html = `
+  let html = `
     <h2>Usuarios</h2>
     <table>
       <tr>
@@ -27,8 +32,8 @@ async function loadUsers() {
       </tr>
   `;
 
-    users.forEach(u => {
-        html += `
+  users.forEach((u) => {
+    html += `
       <tr>
         <td>${u.id}</td>
         <td>${u.name}</td>
@@ -42,36 +47,36 @@ async function loadUsers() {
         <td>-</td>
       </tr>
     `;
-    });
+  });
 
-    html += `</table>`;
+  html += `</table>`;
 
-    document.getElementById("table").innerHTML = html;
+  document.getElementById("table").innerHTML = html;
 }
 
 /* =========================
    🔁 CAMBIAR ROL
 ========================= */
 async function changeRole(id, role) {
-    await fetch(`${API}/usuarios/${id}/role`, {
-        method: "PUT",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ role })
-    });
+  await fetch(`${API}/usuarios/${id}/role`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ role }),
+  });
 
-    alert("Rol actualizado");
+  alert("Rol actualizado");
 }
 
 /* =========================
    📦 PRODUCTOS
 ========================= */
 async function loadProducts() {
-    const res = await fetch(`${API}/productos`);
-    const products = await res.json();
+  const res = await fetch(`${API}/productos`);
+  const products = await res.json();
 
-    let html = `
+  let html = `
     <h2>Productos</h2>
     <table>
       <tr>
@@ -81,25 +86,25 @@ async function loadProducts() {
       </tr>
   `;
 
-    products.forEach(p => {
-        html += `
+  products.forEach((p) => {
+    html += `
       <tr>
         <td>${p.id}</td>
         <td>${p.nombre}</td>
         <td>${p.precio} €</td>
       </tr>
     `;
-    });
+  });
 
-    html += `</table>`;
+  html += `</table>`;
 
-    document.getElementById("table").innerHTML = html;
+  document.getElementById("table").innerHTML = html;
 }
 
 /* =========================
    🚪 LOGOUT
 ========================= */
 function logout() {
-    localStorage.removeItem("role");
-    window.location.href = "../index.html";
+  localStorage.removeItem("role");
+  window.location.href = "../index.html";
 }
